@@ -11,15 +11,20 @@
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
-  <meta property="og:title" content="Farg | Solucoes Estrategicas para Empresas">
+  <meta property="og:title" content="Farg | Solucoes Estratégicas para Empresas">
   <meta property="og:description" content="Estrutura estrategica, atendimento consultivo e foco total em performance para o seu negocio.">
   <meta property="og:url" content="https://www.farg.com.br/">
   <meta property="og:site_name" content="Farg">
+  <meta property="og:image" content="https://www.farg.com.br/assets/home-hero-1280.webp">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Farg | Solucoes Estrategicas para Empresas">
-  <meta name="twitter:description" content="Conheca quem atendemos, nossos diferenciais e resultados comprovados por clientes.">
+  <meta name="twitter:title" content="Farg | Soluções Estrategicas para Empresas">
+  <meta name="twitter:description" content="Conheça quem atendemos, nossos diferenciais e resultados comprovados por clientes.">
+  <meta name="twitter:image" content="https://www.farg.com.br/assets/home-hero-1280.webp">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap">
   <link rel="stylesheet" href="styles.css">
 
   <script type="application/ld+json">
@@ -41,114 +46,167 @@
   <header class="site-header" id="topo">
     <div class="layout-container">
       <nav class="site-nav" aria-label="Navegacao principal">
-        <div class="brand-area">
-          <a class="brand-area__link" href="#home" aria-label="Ir para a pagina inicial da Farg">
-            <span class="brand-area__logo" aria-hidden="true">Logo</span>
-            <span class="brand-area__name">Farg</span>
+        <div class="logo">
+          <a class="logo__link" href="#home" aria-label="Ir para a pagina inicial da Farg">
+            <span class="logo__text" aria-hidden="true">Farg</span>
+            <span class="logo__text logo__text--accent" aria-hidden="true">Co.</span>
           </a>
         </div>
 
         <ul class="site-nav__list">
           <li class="site-nav__item"><a class="site-nav__link" href="#home">Home</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="#quem-atendemos">Quem atendemos</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="#depoimentos">Depoimentos</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="#diferencial">Diferencial</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="#servicos">Servicos</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="#por-que-farg">Por que a Farg</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="#feedbacks">Feedbacks</a></li>
         </ul>
 
-        <a class="site-nav__cta" href="mailto:contato@farg.com.br">Entrar em contato</a>
+        <a class="site-nav__cta" href="mailto:contato@farg.com.br">Solicitar orcamento</a>
       </nav>
     </div>
   </header>
 
   <main id="conteudo-principal">
     <section class="section section--hero" id="home" aria-labelledby="titulo-home">
-      <div class="layout-container">
-        <header class="section__header">
-          <h1 class="section__title" id="titulo-home">Solucoes estrategicas para acelerar resultados reais</h1>
-          <p class="section__description">A Farg conecta estrategia, execucao e acompanhamento continuo para transformar metas em crescimento consistente.</p>
-        </header>
+      <figure class="hero-image" aria-hidden="true">
+        <picture>
+          <img
+            class="hero-image__img"
+            src="assets/Farg simbolo.png"
+            alt=""
+            width="1600"
+            height="900"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async">
+        </picture>
+      </figure>
+
+      <div class="layout-container hero-content">
+        <h1 class="hero-title" id="titulo-home">
+          Alcance os seus
+          <span class="hero-title__highlight">clientes</span>
+          e aumente suas
+          <span class="hero-title__highlight">vendas</span>
+          com
+          <span class="hero-title__animated" aria-live="polite">
+            <span id="hero-palavra-dinamica">Sites</span>
+          </span>
+        </h1>
       </div>
     </section>
 
-    <section class="section" id="quem-atendemos" aria-labelledby="titulo-quem-atendemos">
-      <div class="layout-container">
-        <header class="section__header">
-          <h2 class="section__title" id="titulo-quem-atendemos">Quem atendemos</h2>
-          <p class="section__description">Atuamos com empresas que buscam previsibilidade, organizacao operacional e aumento de performance comercial.</p>
+    <section class="section services-section" id="servicos" aria-labelledby="titulo-servicos">
+      <div class="layout-container services-section__content">
+        <header class="section-header section-header--centered">
+          <h2 class="section-title" id="titulo-servicos">Solucoes para acelerar o seu negocio</h2>
+          <p class="section-description">Escolha os servicos que fazem sentido para sua fase atual e solicite um orcamento personalizado.</p>
         </header>
 
-        <div class="audience-grid">
-          <article class="audience-card">
-            <h3 class="audience-card__title">Empresas em crescimento</h3>
-            <p class="audience-card__text">Estruturamos processos para sustentar crescimento com qualidade e eficiencia.</p>
+        <div class="services-grid" aria-label="Servicos da Farg">
+          <article class="service-card">
+            <span class="service-card__number">01</span>
+            <h3 class="service-card__title">CRIACAO DE SITES</h3>
           </article>
 
-          <article class="audience-card">
-            <h3 class="audience-card__title">Operacoes em reestruturacao</h3>
-            <p class="audience-card__text">Mapeamos gargalos e aplicamos melhorias para recuperar produtividade e margem.</p>
+          <article class="service-card">
+            <span class="service-card__number">02</span>
+            <h3 class="service-card__title">E-COMMERCE</h3>
           </article>
 
-          <article class="audience-card">
-            <h3 class="audience-card__title">Negocios orientados a metas</h3>
-            <p class="audience-card__text">Criamos planos claros com indicadores objetivos para guiar decisoes e resultados.</p>
+          <article class="service-card">
+            <span class="service-card__number">03</span>
+            <h3 class="service-card__title">APLICATIVOS</h3>
+          </article>
+
+          <article class="service-card">
+            <span class="service-card__number">04</span>
+            <h3 class="service-card__title">MARKETING</h3>
+          </article>
+
+          <article class="service-card">
+            <span class="service-card__number">05</span>
+            <h3 class="service-card__title">SOFTWARES</h3>
+          </article>
+
+          <article class="service-card">
+            <span class="service-card__number">06</span>
+            <h3 class="service-card__title">TRAFEGO PAGO</h3>
+          </article>
+        </div>
+
+        <a class="services-section__button" href="mailto:contato@farg.com.br">Solicitar orcamento</a>
+      </div>
+    </section>
+
+    <section class="section why-section" id="por-que-farg" aria-labelledby="titulo-por-que-farg">
+      <div class="layout-container why-section__content">
+        <header class="section-header section-header--centered">
+          <h2 class="section-title" id="titulo-por-que-farg">Por que escolher a Farg</h2>
+          <p class="section-description">Organizamos estrategia, criacao e performance para que cada projeto tenha objetivo claro.</p>
+        </header>
+
+        <div class="why-grid" aria-label="Diferenciais da Farg">
+          <article class="why-card">
+            <span class="why-card__icon" aria-hidden="true"></span>
+            <h3 class="why-card__title">Estrategia clara</h3>
+            <p class="why-card__text">Cada entrega parte de um plano objetivo, com prioridades e metas alinhadas ao seu negocio.</p>
+          </article>
+
+          <article class="why-card">
+            <span class="why-card__icon" aria-hidden="true"></span>
+            <h3 class="why-card__title">Execucao eficiente</h3>
+            <p class="why-card__text">Criamos solucoes digitais com estrutura limpa, boa performance e foco na experiencia do usuario.</p>
+          </article>
+
+          <article class="why-card">
+            <span class="why-card__icon" aria-hidden="true"></span>
+            <h3 class="why-card__title">Foco em resultado</h3>
+            <p class="why-card__text">Acompanhamos indicadores para ajustar campanhas, paginas e funis com base em dados reais.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section section--muted" id="depoimentos" aria-labelledby="titulo-depoimentos">
-      <div class="layout-container">
-        <header class="section__header">
-          <h2 class="section__title" id="titulo-depoimentos">Depoimentos</h2>
-          <p class="section__description">Experiencias de clientes que evoluiram com o suporte da Farg.</p>
+    <section class="section feedback-section" id="feedbacks" aria-labelledby="titulo-feedbacks">
+      <div class="layout-container feedback-section__content">
+        <header class="section-header section-header--centered">
+          <h2 class="section-title" id="titulo-feedbacks">Feedbacks de clientes</h2>
         </header>
 
-        <div class="testimonials-grid">
-          <article class="testimonial-card">
-            <blockquote class="testimonial-card__quote">
-              <p>"A Farg trouxe clareza para nossas prioridades e aumentamos a eficiencia da operacao em poucos meses."</p>
-            </blockquote>
-            <p class="testimonial-card__author"><strong>Mariana Lima</strong> | Diretora de Operacoes</p>
-          </article>
+        <div class="feedback-carousel" data-feedback-carousel>
+          <div class="feedback-carousel__track">
+            <article class="feedback-card is-active">
+              <blockquote class="feedback-card__quote">"A Farg estruturou nosso site e deixou o atendimento comercial muito mais organizado."</blockquote>
+              <p class="feedback-card__client">Mariana Costa</p>
+              <p class="feedback-card__role">Loja de moda feminina</p>
+            </article>
 
-          <article class="testimonial-card">
-            <blockquote class="testimonial-card__quote">
-              <p>"Com metodologia e acompanhamento continuo, conseguimos transformar planejamento em resultado pratico."</p>
-            </blockquote>
-            <p class="testimonial-card__author"><strong>Ricardo Souza</strong> | CEO</p>
-          </article>
+            <article class="feedback-card">
+              <blockquote class="feedback-card__quote">"O novo funil trouxe mais pedidos de orcamento e conseguimos medir melhor cada campanha."</blockquote>
+              <p class="feedback-card__client">Rafael Nunes</p>
+              <p class="feedback-card__role">Servicos B2B</p>
+            </article>
+
+            <article class="feedback-card">
+              <blockquote class="feedback-card__quote">"A comunicacao foi simples e o projeto ficou pronto com uma identidade muito mais profissional."</blockquote>
+              <p class="feedback-card__client">Bianca Martins</p>
+              <p class="feedback-card__role">Clinica estetica</p>
+            </article>
+          </div>
+
+          <div class="feedback-carousel__controls" aria-label="Controles do carrossel de feedbacks">
+            <button class="feedback-carousel__button" type="button" data-feedback-prev aria-label="Feedback anterior">Anterior</button>
+            <div class="feedback-carousel__dots" data-feedback-dots aria-hidden="true"></div>
+            <button class="feedback-carousel__button" type="button" data-feedback-next aria-label="Proximo feedback">Proximo</button>
+          </div>
         </div>
-      </div>
-    </section>
-
-    <section class="section" id="diferencial" aria-labelledby="titulo-diferencial">
-      <div class="layout-container">
-        <header class="section__header">
-          <h2 class="section__title" id="titulo-diferencial">Nosso diferencial</h2>
-          <p class="section__description">Unimos visao estrategica com execucao orientada por dados para garantir progresso continuo.</p>
-        </header>
-
-        <ul class="differential-list" aria-label="Principais diferenciais da Farg">
-          <li class="differential-list__item">
-            <h3 class="differential-list__title">Planejamento acionavel</h3>
-            <p class="differential-list__text">Cada etapa possui prioridades claras, prazos e responsabilidades bem definidas.</p>
-          </li>
-          <li class="differential-list__item">
-            <h3 class="differential-list__title">Gestao por indicadores</h3>
-            <p class="differential-list__text">Acompanhamos metricas chave para ajustar a rota rapidamente e com seguranca.</p>
-          </li>
-          <li class="differential-list__item">
-            <h3 class="differential-list__title">Atendimento consultivo</h3>
-            <p class="differential-list__text">Trabalhamos lado a lado com sua equipe para acelerar maturidade e autonomia.</p>
-          </li>
-        </ul>
       </div>
     </section>
   </main>
 
   <footer class="site-footer" aria-label="Rodape">
     <div class="layout-container site-footer__content">
-      <p class="site-footer__copyright">&copy; <span id="ano-atual">2026</span> Farg. Todos os direitos reservados.</p>
+      <p class="site-footer__copyright">&copy; <span id="ano-atual"></span> Farg. Todos os direitos reservados.</p>
       <address class="site-footer__contact">
         <a href="mailto:contato@farg.com.br">contato@farg.com.br</a>
       </address>
