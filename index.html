@@ -1,30 +1,31 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Farg | Solucoes Estrategicas para Empresas</title>
-  <meta name="description" content="A Farg oferece solucoes estrategicas para empresas com foco em crescimento, eficiencia e resultados mensuraveis.">
+  <title>Farg | Soluções Estratégicas para Empresas</title>
+  <meta name="description" content="A Farg cria sites, e-commerces, aplicativos e estratégias de marketing digital com foco em performance e resultado mensurável.">
+  <meta name="theme-color" content="#020217">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="author" content="Farg">
   <link rel="canonical" href="https://www.farg.com.br/">
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
-  <meta property="og:title" content="Farg | Solucoes Estratégicas para Empresas">
-  <meta property="og:description" content="Estrutura estrategica, atendimento consultivo e foco total em performance para o seu negocio.">
+  <meta property="og:title" content="Farg | Soluções Estratégicas para Empresas">
+  <meta property="og:description" content="Estratégia, criação e performance digital para empresas que querem crescer com método.">
   <meta property="og:url" content="https://www.farg.com.br/">
   <meta property="og:site_name" content="Farg">
-  <meta property="og:image" content="https://www.farg.com.br/assets/home-hero-1280.webp">
+  <meta property="og:image" content="https://www.farg.com.br/assets/FargLogo.png">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Farg | Soluções Estrategicas para Empresas">
+  <meta name="twitter:title" content="Farg | Soluções Estratégicas para Empresas">
   <meta name="twitter:description" content="Conheça quem atendemos, nossos diferenciais e resultados comprovados por clientes.">
-  <meta name="twitter:image" content="https://www.farg.com.br/assets/home-hero-1280.webp">
+  <meta name="twitter:image" content="https://www.farg.com.br/assets/FargLogo.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="styles.css">
 
   <script type="application/ld+json">
@@ -33,7 +34,8 @@
       "@type": "Organization",
       "name": "Farg",
       "url": "https://www.farg.com.br/",
-      "logo": "https://www.farg.com.br/assets/logo.png",
+      "logo": "https://www.farg.com.br/assets/FargLogo.png",
+      "email": "contato@farg.com.br",
       "sameAs": [
         "https://www.linkedin.com/company/farg"
       ]
@@ -41,48 +43,62 @@
   </script>
 </head>
 <body>
-  <a class="skip-link" href="#conteudo-principal">Pular para o conteudo principal</a>
+  <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
 
-  <header class="site-header" id="topo">
+  <header class="site-header" id="topo" data-site-header>
     <div class="layout-container">
-      <nav class="site-nav" aria-label="Navegacao principal">
-        <div class="logo">
-          <a class="logo__link" href="#home" aria-label="Ir para a pagina inicial da Farg">
-            <span class="logo__text" aria-hidden="true">Farg</span>
-            <span class="logo__text logo__text--accent" aria-hidden="true">Co.</span>
+      <nav class="site-nav" aria-label="Navegação principal">
+        <a class="logo" href="#home" aria-label="Ir para a página inicial da Farg">
+          <span class="logo__mark" aria-hidden="true">F</span>
+          <span class="logo__text">Farg<span class="logo__dot" aria-hidden="true">.</span></span>
+        </a>
+
+        <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu" data-nav-toggle>
+          <span class="site-nav__toggle-bar" aria-hidden="true"></span>
+          <span class="site-nav__toggle-bar" aria-hidden="true"></span>
+          <span class="site-nav__toggle-bar" aria-hidden="true"></span>
+        </button>
+
+        <div class="site-nav__menu" id="menu-principal" data-nav-menu>
+          <ul class="site-nav__list">
+            <li class="site-nav__item"><a class="site-nav__link" href="#home" data-nav-link>Home</a></li>
+            <li class="site-nav__item"><a class="site-nav__link" href="#servicos" data-nav-link>Serviços</a></li>
+            <li class="site-nav__item"><a class="site-nav__link" href="#por-que-farg" data-nav-link>Por que a Farg</a></li>
+            <li class="site-nav__item"><a class="site-nav__link" href="#processo" data-nav-link>Processo</a></li>
+            <li class="site-nav__item"><a class="site-nav__link" href="#feedbacks" data-nav-link>Clientes</a></li>
+          </ul>
+
+          <a class="site-nav__cta" href="#contato">
+            Falar com a Farg
+            <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
           </a>
         </div>
-
-        <ul class="site-nav__list">
-          <li class="site-nav__item"><a class="site-nav__link" href="#home">Home</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="#servicos">Servicos</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="#por-que-farg">Por que a Farg</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="#feedbacks">Feedbacks</a></li>
-        </ul>
-
-        <a class="site-nav__cta" href="mailto:contato@farg.com.br">Solicitar orcamento</a>
       </nav>
     </div>
   </header>
 
   <main id="conteudo-principal">
     <section class="section section--hero" id="home" aria-labelledby="titulo-home">
+      <div class="hero-glow" aria-hidden="true"></div>
       <figure class="hero-image" aria-hidden="true">
-        <picture>
-          <img
-            class="hero-image__img"
-            src="assets/Farg simbolo.png"
-            alt=""
-            width="1600"
-            height="900"
-            loading="eager"
-            fetchpriority="high"
-            decoding="async">
-        </picture>
+        <img
+          class="hero-image__img"
+          src="assets/Farg simbolo.png"
+          alt=""
+          width="1600"
+          height="900"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async">
       </figure>
 
       <div class="layout-container hero-content">
-        <h1 class="hero-title" id="titulo-home">
+        <span class="eyebrow" data-reveal>
+          <span class="eyebrow__dot" aria-hidden="true"></span>
+          Agência digital · Estratégia + Performance
+        </span>
+
+        <h1 class="hero-title" id="titulo-home" data-reveal>
           Alcance os seus
           <span class="hero-title__highlight">clientes</span>
           e aumente suas
@@ -92,126 +108,339 @@
             <span id="hero-palavra-dinamica">Sites</span>
           </span>
         </h1>
+
+        <p class="hero-subtitle" data-reveal>
+          Construímos sites, e-commerces, aplicativos e funis de marketing com método claro,
+          execução eficiente e foco total no resultado do seu negócio.
+        </p>
+
+        <div class="hero-actions" data-reveal>
+          <a class="button button--primary" href="#contato">
+            Solicitar orçamento
+            <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a class="button button--ghost" href="#servicos">Ver serviços</a>
+        </div>
+
+        <ul class="hero-trust" data-reveal>
+          <li class="hero-trust__item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Atendimento consultivo
+          </li>
+          <li class="hero-trust__item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Entregas com prazo definido
+          </li>
+          <li class="hero-trust__item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Métricas reais de performance
+          </li>
+        </ul>
       </div>
+
+      <a class="hero-scroll" href="#servicos" aria-label="Rolar para serviços">
+        <span class="hero-scroll__label">Role para descobrir</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+      </a>
     </section>
 
     <section class="section services-section" id="servicos" aria-labelledby="titulo-servicos">
       <div class="layout-container services-section__content">
-        <header class="section-header section-header--centered">
-          <h2 class="section-title" id="titulo-servicos">Solucoes para acelerar o seu negocio</h2>
-          <p class="section-description">Escolha os servicos que fazem sentido para sua fase atual e solicite um orcamento personalizado.</p>
+        <header class="section-header section-header--centered" data-reveal>
+          <span class="section-eyebrow">Serviços</span>
+          <h2 class="section-title" id="titulo-servicos">Soluções para acelerar o seu negócio</h2>
+          <p class="section-description">Escolha os serviços que fazem sentido para a fase atual da sua empresa e solicite um orçamento personalizado.</p>
         </header>
 
-        <div class="services-grid" aria-label="Servicos da Farg">
-          <article class="service-card">
-            <span class="service-card__number">01</span>
-            <h3 class="service-card__title">CRIACAO DE SITES</h3>
+        <div class="services-grid" aria-label="Serviços da Farg">
+          <article class="service-card" data-reveal>
+            <div class="service-card__head">
+              <span class="service-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M2 10h20M8 18v3M16 18v3M6 21h12"/></svg>
+              </span>
+              <span class="service-card__number">01</span>
+            </div>
+            <h3 class="service-card__title">Criação de Sites</h3>
+            <p class="service-card__text">Sites institucionais e landing pages com design moderno, performance otimizada e SEO técnico aplicado.</p>
           </article>
 
-          <article class="service-card">
-            <span class="service-card__number">02</span>
-            <h3 class="service-card__title">E-COMMERCE</h3>
+          <article class="service-card" data-reveal>
+            <div class="service-card__head">
+              <span class="service-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1.6"/><circle cx="18" cy="21" r="1.6"/><path d="M3 4h2l2.4 12.3a2 2 0 0 0 2 1.7h8.2a2 2 0 0 0 2-1.6L21 8H6"/></svg>
+              </span>
+              <span class="service-card__number">02</span>
+            </div>
+            <h3 class="service-card__title">E-commerce</h3>
+            <p class="service-card__text">Lojas virtuais estruturadas para converter, com checkout fluido, integração de meios de pagamento e gestão de catálogo.</p>
           </article>
 
-          <article class="service-card">
-            <span class="service-card__number">03</span>
-            <h3 class="service-card__title">APLICATIVOS</h3>
+          <article class="service-card" data-reveal>
+            <div class="service-card__head">
+              <span class="service-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg>
+              </span>
+              <span class="service-card__number">03</span>
+            </div>
+            <h3 class="service-card__title">Aplicativos</h3>
+            <p class="service-card__text">Apps mobile e web sob medida, com UX validada e arquitetura escalável para crescer com a sua operação.</p>
           </article>
 
-          <article class="service-card">
-            <span class="service-card__number">04</span>
-            <h3 class="service-card__title">MARKETING</h3>
+          <article class="service-card" data-reveal>
+            <div class="service-card__head">
+              <span class="service-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l15-7v16L3 13z"/><path d="M11 19a3 3 0 0 1-6 0v-5"/></svg>
+              </span>
+              <span class="service-card__number">04</span>
+            </div>
+            <h3 class="service-card__title">Marketing Digital</h3>
+            <p class="service-card__text">Conteúdo estratégico, social media e campanhas integradas para construir autoridade e gerar demanda qualificada.</p>
           </article>
 
-          <article class="service-card">
-            <span class="service-card__number">05</span>
-            <h3 class="service-card__title">SOFTWARES</h3>
+          <article class="service-card" data-reveal>
+            <div class="service-card__head">
+              <span class="service-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </span>
+              <span class="service-card__number">05</span>
+            </div>
+            <h3 class="service-card__title">Softwares Sob Medida</h3>
+            <p class="service-card__text">Sistemas internos, automações e integrações que reduzem retrabalho e organizam o fluxo do seu negócio.</p>
           </article>
 
-          <article class="service-card">
-            <span class="service-card__number">06</span>
-            <h3 class="service-card__title">TRAFEGO PAGO</h3>
+          <article class="service-card" data-reveal>
+            <div class="service-card__head">
+              <span class="service-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg>
+              </span>
+              <span class="service-card__number">06</span>
+            </div>
+            <h3 class="service-card__title">Tráfego Pago</h3>
+            <p class="service-card__text">Google Ads e Meta Ads com gestão ativa, rastreamento de conversões e relatórios claros sobre o que está dando retorno.</p>
           </article>
         </div>
 
-        <a class="services-section__button" href="mailto:contato@farg.com.br">Solicitar orcamento</a>
+        <a class="button button--primary services-section__button" href="#contato">
+          Solicitar orçamento personalizado
+          <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
       </div>
     </section>
 
     <section class="section why-section" id="por-que-farg" aria-labelledby="titulo-por-que-farg">
       <div class="layout-container why-section__content">
-        <header class="section-header section-header--centered">
+        <header class="section-header section-header--centered" data-reveal>
+          <span class="section-eyebrow">Diferenciais</span>
           <h2 class="section-title" id="titulo-por-que-farg">Por que escolher a Farg</h2>
-          <p class="section-description">Organizamos estrategia, criacao e performance para que cada projeto tenha objetivo claro.</p>
+          <p class="section-description">Organizamos estratégia, criação e performance para que cada projeto tenha objetivo claro e resultado mensurável.</p>
         </header>
 
         <div class="why-grid" aria-label="Diferenciais da Farg">
-          <article class="why-card">
-            <span class="why-card__icon" aria-hidden="true"></span>
-            <h3 class="why-card__title">Estrategia clara</h3>
-            <p class="why-card__text">Cada entrega parte de um plano objetivo, com prioridades e metas alinhadas ao seu negocio.</p>
+          <article class="why-card" data-reveal>
+            <span class="why-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg>
+            </span>
+            <h3 class="why-card__title">Estratégia clara</h3>
+            <p class="why-card__text">Cada entrega parte de um plano objetivo, com prioridades, prazos e metas alinhadas ao seu negócio.</p>
           </article>
 
-          <article class="why-card">
-            <span class="why-card__icon" aria-hidden="true"></span>
-            <h3 class="why-card__title">Execucao eficiente</h3>
-            <p class="why-card__text">Criamos solucoes digitais com estrutura limpa, boa performance e foco na experiencia do usuario.</p>
+          <article class="why-card" data-reveal>
+            <span class="why-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>
+            </span>
+            <h3 class="why-card__title">Execução eficiente</h3>
+            <p class="why-card__text">Soluções digitais com estrutura limpa, boa performance e foco real na experiência de quem usa.</p>
           </article>
 
-          <article class="why-card">
-            <span class="why-card__icon" aria-hidden="true"></span>
+          <article class="why-card" data-reveal>
+            <span class="why-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg>
+            </span>
             <h3 class="why-card__title">Foco em resultado</h3>
-            <p class="why-card__text">Acompanhamos indicadores para ajustar campanhas, paginas e funis com base em dados reais.</p>
+            <p class="why-card__text">Acompanhamos indicadores para ajustar campanhas, páginas e funis com base em dados reais.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section feedback-section" id="feedbacks" aria-labelledby="titulo-feedbacks">
-      <div class="layout-container feedback-section__content">
-        <header class="section-header section-header--centered">
-          <h2 class="section-title" id="titulo-feedbacks">Feedbacks de clientes</h2>
+    <section class="section process-section" id="processo" aria-labelledby="titulo-processo">
+      <div class="layout-container">
+        <header class="section-header section-header--centered" data-reveal>
+          <span class="section-eyebrow">Processo</span>
+          <h2 class="section-title" id="titulo-processo">Como trabalhamos com você</h2>
+          <p class="section-description">Um caminho claro do primeiro contato à entrega final, com transparência em cada etapa.</p>
         </header>
 
-        <div class="feedback-carousel" data-feedback-carousel>
+        <ol class="process-steps">
+          <li class="process-step" data-reveal>
+            <span class="process-step__number">01</span>
+            <h3 class="process-step__title">Diagnóstico</h3>
+            <p class="process-step__text">Entendemos seu negócio, públicos, concorrentes e objetivos antes de propor qualquer solução.</p>
+          </li>
+          <li class="process-step" data-reveal>
+            <span class="process-step__number">02</span>
+            <h3 class="process-step__title">Estratégia</h3>
+            <p class="process-step__text">Desenhamos o plano com escopo, prazos, métricas de sucesso e responsáveis bem definidos.</p>
+          </li>
+          <li class="process-step" data-reveal>
+            <span class="process-step__number">03</span>
+            <h3 class="process-step__title">Execução</h3>
+            <p class="process-step__text">Design, desenvolvimento e mídia rodam em ciclos curtos, com você acompanhando a cada entrega.</p>
+          </li>
+          <li class="process-step" data-reveal>
+            <span class="process-step__number">04</span>
+            <h3 class="process-step__title">Otimização</h3>
+            <p class="process-step__text">Após o lançamento, medimos, ajustamos e evoluímos a solução com base no comportamento real dos usuários.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section feedback-section" id="feedbacks" aria-labelledby="titulo-feedbacks">
+      <div class="layout-container feedback-section__content">
+        <header class="section-header section-header--centered" data-reveal>
+          <span class="section-eyebrow">Clientes</span>
+          <h2 class="section-title" id="titulo-feedbacks">O que dizem sobre a Farg</h2>
+          <p class="section-description">Empresas que confiaram na nossa entrega e cresceram junto.</p>
+        </header>
+
+        <div class="feedback-carousel" data-feedback-carousel data-reveal>
           <div class="feedback-carousel__track">
             <article class="feedback-card is-active">
-              <blockquote class="feedback-card__quote">"A Farg estruturou nosso site e deixou o atendimento comercial muito mais organizado."</blockquote>
-              <p class="feedback-card__client">Mariana Costa</p>
-              <p class="feedback-card__role">Loja de moda feminina</p>
+              <svg class="feedback-card__quote-mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 7h4v4H8c0 2 1 3 3 3v3c-3 0-6-2-6-6V7zm9 0h4v4h-3c0 2 1 3 3 3v3c-3 0-6-2-6-6V7z"/></svg>
+              <blockquote class="feedback-card__quote">A Farg estruturou nosso site e deixou o atendimento comercial muito mais organizado. Em três meses já sentimos a diferença no volume de pedidos qualificados.</blockquote>
+              <div class="feedback-card__person">
+                <span class="feedback-card__avatar" aria-hidden="true">M</span>
+                <div>
+                  <p class="feedback-card__client">Mariana Costa</p>
+                  <p class="feedback-card__role">Loja de moda feminina</p>
+                </div>
+              </div>
             </article>
 
             <article class="feedback-card">
-              <blockquote class="feedback-card__quote">"O novo funil trouxe mais pedidos de orcamento e conseguimos medir melhor cada campanha."</blockquote>
-              <p class="feedback-card__client">Rafael Nunes</p>
-              <p class="feedback-card__role">Servicos B2B</p>
+              <svg class="feedback-card__quote-mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 7h4v4H8c0 2 1 3 3 3v3c-3 0-6-2-6-6V7zm9 0h4v4h-3c0 2 1 3 3 3v3c-3 0-6-2-6-6V7z"/></svg>
+              <blockquote class="feedback-card__quote">O novo funil trouxe mais pedidos de orçamento e conseguimos medir cada campanha. Hoje sabemos exatamente onde investir.</blockquote>
+              <div class="feedback-card__person">
+                <span class="feedback-card__avatar feedback-card__avatar--alt" aria-hidden="true">R</span>
+                <div>
+                  <p class="feedback-card__client">Rafael Nunes</p>
+                  <p class="feedback-card__role">Serviços B2B</p>
+                </div>
+              </div>
             </article>
 
             <article class="feedback-card">
-              <blockquote class="feedback-card__quote">"A comunicacao foi simples e o projeto ficou pronto com uma identidade muito mais profissional."</blockquote>
-              <p class="feedback-card__client">Bianca Martins</p>
-              <p class="feedback-card__role">Clinica estetica</p>
+              <svg class="feedback-card__quote-mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 7h4v4H8c0 2 1 3 3 3v3c-3 0-6-2-6-6V7zm9 0h4v4h-3c0 2 1 3 3 3v3c-3 0-6-2-6-6V7z"/></svg>
+              <blockquote class="feedback-card__quote">A comunicação foi simples e o projeto ficou pronto com uma identidade muito mais profissional. Recebemos elogios desde o lançamento.</blockquote>
+              <div class="feedback-card__person">
+                <span class="feedback-card__avatar feedback-card__avatar--alt2" aria-hidden="true">B</span>
+                <div>
+                  <p class="feedback-card__client">Bianca Martins</p>
+                  <p class="feedback-card__role">Clínica estética</p>
+                </div>
+              </div>
             </article>
           </div>
 
           <div class="feedback-carousel__controls" aria-label="Controles do carrossel de feedbacks">
-            <button class="feedback-carousel__button" type="button" data-feedback-prev aria-label="Feedback anterior">Anterior</button>
-            <div class="feedback-carousel__dots" data-feedback-dots aria-hidden="true"></div>
-            <button class="feedback-carousel__button" type="button" data-feedback-next aria-label="Proximo feedback">Proximo</button>
+            <button class="feedback-carousel__button" type="button" data-feedback-prev aria-label="Feedback anterior">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <div class="feedback-carousel__dots" data-feedback-dots role="tablist" aria-label="Selecionar feedback"></div>
+            <button class="feedback-carousel__button" type="button" data-feedback-next aria-label="Próximo feedback">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-section" id="contato" aria-labelledby="titulo-contato">
+      <div class="layout-container">
+        <div class="cta-card" data-reveal>
+          <div class="cta-card__content">
+            <span class="section-eyebrow">Vamos conversar</span>
+            <h2 class="section-title" id="titulo-contato">Pronto para acelerar o seu próximo projeto?</h2>
+            <p class="section-description">Conte o que você precisa. Em até um dia útil retornamos com um plano e um orçamento personalizado.</p>
+          </div>
+
+          <div class="cta-channels">
+            <a class="cta-channel" href="https://wa.me/5500000000000" target="_blank" rel="noopener">
+              <span class="cta-channel__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11.5 11.5 0 0 0 3 18l-1.5 5L7 21.5A11.5 11.5 0 1 0 20.5 3.5zM12 21a9 9 0 0 1-4.6-1.3l-.3-.2-3.4.9.9-3.3-.2-.3A9 9 0 1 1 12 21zm5.1-6.7c-.3-.2-1.6-.8-1.9-.9-.3 0-.4-.2-.6.1l-.8 1c-.2.2-.3.2-.5.1-.3-.1-1.2-.4-2.2-1.4-.8-.7-1.4-1.6-1.5-1.9-.2-.3 0-.4.1-.5l.4-.4c.1-.2.2-.3.3-.5 0-.2 0-.3-.1-.5l-.7-1.7c-.2-.4-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.4c-.3.3-1 1-1 2.4s1 2.8 1.2 3 2.1 3.2 5 4.5l1.3.5c.5 0 1.6-.6 1.8-1.2.2-.6.2-1.2 0-1.3l-.5-.3z"/></svg>
+              </span>
+              <div>
+                <strong>WhatsApp</strong>
+                <span>Resposta em minutos</span>
+              </div>
+            </a>
+
+            <a class="cta-channel" href="mailto:contato@farg.com.br">
+              <span class="cta-channel__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              </span>
+              <div>
+                <strong>contato@farg.com.br</strong>
+                <span>Envie um briefing</span>
+              </div>
+            </a>
+
+            <a class="cta-channel" href="https://www.linkedin.com/company/farg" target="_blank" rel="noopener">
+              <span class="cta-channel__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8h4.56v14H.22V8zM8 8h4.37v1.92h.06a4.79 4.79 0 0 1 4.31-2.36c4.61 0 5.46 3.04 5.46 6.99V22h-4.55v-6.6c0-1.57-.03-3.6-2.2-3.6-2.2 0-2.54 1.72-2.54 3.49V22H8V8z"/></svg>
+              </span>
+              <div>
+                <strong>LinkedIn</strong>
+                <span>Conheça o time</span>
+              </div>
+            </a>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer" aria-label="Rodape">
+  <footer class="site-footer" aria-label="Rodapé">
     <div class="layout-container site-footer__content">
+      <div class="site-footer__brand">
+        <a class="logo logo--footer" href="#home" aria-label="Ir para o topo">
+          <span class="logo__mark" aria-hidden="true">F</span>
+          <span class="logo__text">Farg<span class="logo__dot" aria-hidden="true">.</span></span>
+        </a>
+        <p class="site-footer__tagline">Soluções estratégicas para empresas que querem crescer com método.</p>
+      </div>
+
+      <div class="site-footer__columns">
+        <div>
+          <h4 class="site-footer__title">Navegação</h4>
+          <ul class="site-footer__list">
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#por-que-farg">Por que a Farg</a></li>
+            <li><a href="#processo">Processo</a></li>
+            <li><a href="#feedbacks">Clientes</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="site-footer__title">Contato</h4>
+          <ul class="site-footer__list">
+            <li><a href="mailto:contato@farg.com.br">contato@farg.com.br</a></li>
+            <li><a href="https://wa.me/5500000000000" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="https://www.linkedin.com/company/farg" target="_blank" rel="noopener">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="layout-container site-footer__bottom">
       <p class="site-footer__copyright">&copy; <span id="ano-atual"></span> Farg. Todos os direitos reservados.</p>
-      <address class="site-footer__contact">
-        <a href="mailto:contato@farg.com.br">contato@farg.com.br</a>
-      </address>
+      <p class="site-footer__credits">Feito com método em São Paulo, Brasil.</p>
     </div>
   </footer>
+
+  <a class="floating-whatsapp" href="https://wa.me/5500000000000" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11.5 11.5 0 0 0 3 18l-1.5 5L7 21.5A11.5 11.5 0 1 0 20.5 3.5zM12 21a9 9 0 0 1-4.6-1.3l-.3-.2-3.4.9.9-3.3-.2-.3A9 9 0 1 1 12 21zm5.1-6.7c-.3-.2-1.6-.8-1.9-.9-.3 0-.4-.2-.6.1l-.8 1c-.2.2-.3.2-.5.1-.3-.1-1.2-.4-2.2-1.4-.8-.7-1.4-1.6-1.5-1.9-.2-.3 0-.4.1-.5l.4-.4c.1-.2.2-.3.3-.5 0-.2 0-.3-.1-.5l-.7-1.7c-.2-.4-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.4c-.3.3-1 1-1 2.4s1 2.8 1.2 3 2.1 3.2 5 4.5l1.3.5c.5 0 1.6-.6 1.8-1.2.2-.6.2-1.2 0-1.3l-.5-.3z"/></svg>
+  </a>
 
   <script src="script.js" defer></script>
 </body>
