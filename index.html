@@ -1,25 +1,28 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Farg | Solucoes Estrategicas para Empresas</title>
-  <meta name="description" content="A Farg oferece solucoes estrategicas para empresas com foco em crescimento, eficiencia e resultados mensuraveis.">
+  <title>Farg | Soluções Estratégicas para Empresas</title>
+  <meta name="description" content="A Farg oferece soluções estratégicas para empresas com foco em crescimento, eficiência e resultados mensuráveis.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="author" content="Farg">
   <link rel="canonical" href="https://www.farg.com.br/">
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
-  <meta property="og:title" content="Farg | Solucoes Estrategicas para Empresas">
-  <meta property="og:description" content="Estrutura estrategica, atendimento consultivo e foco total em performance para o seu negocio.">
+  <meta property="og:title" content="Farg | Soluções Estratégicas para Empresas">
+  <meta property="og:description" content="Estrutura estratégica, atendimento consultivo e foco total em performance para o seu negócio.">
   <meta property="og:url" content="https://www.farg.com.br/">
   <meta property="og:site_name" content="Farg">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Farg | Solucoes Estrategicas para Empresas">
-  <meta name="twitter:description" content="Conheca quem atendemos, nossos diferenciais e resultados comprovados por clientes.">
+  <meta name="twitter:title" content="Farg | Soluções Estratégicas para Empresas">
+  <meta name="twitter:description" content="Conheça quem atendemos, nossos diferenciais e resultados comprovados por clientes.">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 
   <script type="application/ld+json">
@@ -36,26 +39,34 @@
   </script>
 </head>
 <body>
-  <a class="skip-link" href="#conteudo-principal">Pular para o conteudo principal</a>
+  <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
 
   <header class="site-header" id="topo">
     <div class="layout-container">
-      <nav class="site-nav" aria-label="Navegacao principal">
+      <nav class="site-nav" aria-label="Navegação principal">
         <div class="brand-area">
-          <a class="brand-area__link" href="#home" aria-label="Ir para a pagina inicial da Farg">
+          <a class="brand-area__link" href="#home" aria-label="Ir para a página inicial da Farg">
             <span class="brand-area__logo" aria-hidden="true">Logo</span>
             <span class="brand-area__name">Farg</span>
           </a>
         </div>
 
-        <ul class="site-nav__list">
-          <li class="site-nav__item"><a class="site-nav__link" href="#home">Home</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="#quem-atendemos">Quem atendemos</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="#depoimentos">Depoimentos</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="#diferencial">Diferencial</a></li>
-        </ul>
+        <button class="nav-hamburger" aria-label="Abrir menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-        <a class="site-nav__cta" href="mailto:contato@farg.com.br">Entrar em contato</a>
+        <div class="nav-collapse">
+          <ul class="site-nav__list">
+            <li class="site-nav__item"><a class="site-nav__link" href="#home">Home</a></li>
+            <li class="site-nav__item"><a class="site-nav__link" href="#quem-atendemos">Quem atendemos</a></li>
+            <li class="site-nav__item"><a class="site-nav__link" href="#depoimentos">Depoimentos</a></li>
+            <li class="site-nav__item"><a class="site-nav__link" href="#diferencial">Diferencial</a></li>
+          </ul>
+
+          <a class="site-nav__cta" href="mailto:contato@farg.com.br">Entrar em contato</a>
+        </div>
       </nav>
     </div>
   </header>
@@ -63,34 +74,38 @@
   <main id="conteudo-principal">
     <section class="section section--hero" id="home" aria-labelledby="titulo-home">
       <div class="layout-container">
-        <header class="section__header">
-          <h1 class="section__title" id="titulo-home">Solucoes estrategicas para acelerar resultados reais</h1>
-          <p class="section__description">A Farg conecta estrategia, execucao e acompanhamento continuo para transformar metas em crescimento consistente.</p>
+        <header class="section__header hero__header">
+          <h1 class="section__title hero__title" id="titulo-home">Soluções estratégicas para acelerar resultados reais</h1>
+          <p class="section__description hero__description">A Farg conecta estratégia, execução e acompanhamento contínuo para transformar metas em crescimento consistente.</p>
+          <div class="hero__actions">
+            <a class="hero__cta" href="mailto:contato@farg.com.br">Fale com a Farg</a>
+            <a class="hero__cta-secondary" href="#quem-atendemos">Conheça nosso trabalho</a>
+          </div>
         </header>
       </div>
     </section>
 
     <section class="section" id="quem-atendemos" aria-labelledby="titulo-quem-atendemos">
       <div class="layout-container">
-        <header class="section__header">
+        <header class="section__header fade-up">
           <h2 class="section__title" id="titulo-quem-atendemos">Quem atendemos</h2>
-          <p class="section__description">Atuamos com empresas que buscam previsibilidade, organizacao operacional e aumento de performance comercial.</p>
+          <p class="section__description">Atuamos com empresas que buscam previsibilidade, organização operacional e aumento de performance comercial.</p>
         </header>
 
         <div class="audience-grid">
-          <article class="audience-card">
+          <article class="audience-card fade-up">
             <h3 class="audience-card__title">Empresas em crescimento</h3>
-            <p class="audience-card__text">Estruturamos processos para sustentar crescimento com qualidade e eficiencia.</p>
+            <p class="audience-card__text">Estruturamos processos para sustentar crescimento com qualidade e eficiência.</p>
           </article>
 
-          <article class="audience-card">
-            <h3 class="audience-card__title">Operacoes em reestruturacao</h3>
+          <article class="audience-card fade-up">
+            <h3 class="audience-card__title">Operações em reestruturação</h3>
             <p class="audience-card__text">Mapeamos gargalos e aplicamos melhorias para recuperar produtividade e margem.</p>
           </article>
 
-          <article class="audience-card">
-            <h3 class="audience-card__title">Negocios orientados a metas</h3>
-            <p class="audience-card__text">Criamos planos claros com indicadores objetivos para guiar decisoes e resultados.</p>
+          <article class="audience-card fade-up">
+            <h3 class="audience-card__title">Negócios orientados a metas</h3>
+            <p class="audience-card__text">Criamos planos claros com indicadores objetivos para guiar decisões e resultados.</p>
           </article>
         </div>
       </div>
@@ -98,22 +113,22 @@
 
     <section class="section section--muted" id="depoimentos" aria-labelledby="titulo-depoimentos">
       <div class="layout-container">
-        <header class="section__header">
+        <header class="section__header fade-up">
           <h2 class="section__title" id="titulo-depoimentos">Depoimentos</h2>
-          <p class="section__description">Experiencias de clientes que evoluiram com o suporte da Farg.</p>
+          <p class="section__description">Experiências de clientes que evoluíram com o suporte da Farg.</p>
         </header>
 
         <div class="testimonials-grid">
-          <article class="testimonial-card">
+          <article class="testimonial-card fade-up">
             <blockquote class="testimonial-card__quote">
-              <p>"A Farg trouxe clareza para nossas prioridades e aumentamos a eficiencia da operacao em poucos meses."</p>
+              <p>"A Farg trouxe clareza para nossas prioridades e aumentamos a eficiência da operação em poucos meses."</p>
             </blockquote>
-            <p class="testimonial-card__author"><strong>Mariana Lima</strong> | Diretora de Operacoes</p>
+            <p class="testimonial-card__author"><strong>Mariana Lima</strong> | Diretora de Operações</p>
           </article>
 
-          <article class="testimonial-card">
+          <article class="testimonial-card fade-up">
             <blockquote class="testimonial-card__quote">
-              <p>"Com metodologia e acompanhamento continuo, conseguimos transformar planejamento em resultado pratico."</p>
+              <p>"Com metodologia e acompanhamento contínuo, conseguimos transformar planejamento em resultado prático."</p>
             </blockquote>
             <p class="testimonial-card__author"><strong>Ricardo Souza</strong> | CEO</p>
           </article>
@@ -123,30 +138,40 @@
 
     <section class="section" id="diferencial" aria-labelledby="titulo-diferencial">
       <div class="layout-container">
-        <header class="section__header">
+        <header class="section__header fade-up">
           <h2 class="section__title" id="titulo-diferencial">Nosso diferencial</h2>
-          <p class="section__description">Unimos visao estrategica com execucao orientada por dados para garantir progresso continuo.</p>
+          <p class="section__description">Unimos visão estratégica com execução orientada por dados para garantir progresso contínuo.</p>
         </header>
 
         <ul class="differential-list" aria-label="Principais diferenciais da Farg">
-          <li class="differential-list__item">
-            <h3 class="differential-list__title">Planejamento acionavel</h3>
+          <li class="differential-list__item fade-up">
+            <h3 class="differential-list__title">Planejamento acionável</h3>
             <p class="differential-list__text">Cada etapa possui prioridades claras, prazos e responsabilidades bem definidas.</p>
           </li>
-          <li class="differential-list__item">
-            <h3 class="differential-list__title">Gestao por indicadores</h3>
-            <p class="differential-list__text">Acompanhamos metricas chave para ajustar a rota rapidamente e com seguranca.</p>
+          <li class="differential-list__item fade-up">
+            <h3 class="differential-list__title">Gestão por indicadores</h3>
+            <p class="differential-list__text">Acompanhamos métricas-chave para ajustar a rota rapidamente e com segurança.</p>
           </li>
-          <li class="differential-list__item">
+          <li class="differential-list__item fade-up">
             <h3 class="differential-list__title">Atendimento consultivo</h3>
             <p class="differential-list__text">Trabalhamos lado a lado com sua equipe para acelerar maturidade e autonomia.</p>
           </li>
         </ul>
       </div>
     </section>
+
+    <section class="section section--cta" aria-labelledby="titulo-cta">
+      <div class="layout-container">
+        <div class="cta-block fade-up">
+          <h2 class="cta-block__title" id="titulo-cta">Pronto para transformar sua operação?</h2>
+          <p class="cta-block__description">Entre em contato e descubra como a Farg pode acelerar seus resultados.</p>
+          <a class="hero__cta" href="mailto:contato@farg.com.br">Fale com a Farg</a>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer class="site-footer" aria-label="Rodape">
+  <footer class="site-footer" aria-label="Rodapé">
     <div class="layout-container site-footer__content">
       <p class="site-footer__copyright">&copy; <span id="ano-atual">2026</span> Farg. Todos os direitos reservados.</p>
       <address class="site-footer__contact">
