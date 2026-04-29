@@ -56,3 +56,54 @@ if (hamburger && navCollapse) {
     });
   });
 }
+
+// Stagger delay on grouped cards
+const staggerGroups = document.querySelectorAll(
+  '.services-grid, .team-grid, .timeline, .audience-grid, .testimonials-grid, .differential-list'
+);
+staggerGroups.forEach((group) => {
+  const items = group.querySelectorAll(':scope > .fade-up');
+  items.forEach((el, i) => {
+    el.style.transitionDelay = `${Math.min(i * 0.1, 0.6)}s`;
+  });
+});
+
+// Hero scroll counter
+const counterEls = document.querySelectorAll('[data-counter-target]');
+const animateCounter = (el) => {
+  const target = parseInt(el.getAttribute('data-counter-target'), 10) || 0;
+  const duration = 1200;
+  const start = performance.now();
+  const tick = (now) => {
+    const progress = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    el.textContent = String(Math.floor(eased * target));
+    if (progress < 1) requestAnimationFrame(tick);
+    else el.textContent = String(target);
+  };
+  requestAnimationFrame(tick);
+};
+
+const counterObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        counterObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.4 }
+);
+
+counterEls.forEach((el) => counterObserver.observe(el));
+
+// Sticky nav scrolled state
+const siteHeader = document.querySelector('.site-header');
+if (siteHeader) {
+  const onScroll = () => {
+    siteHeader.classList.toggle('is-scrolled', window.scrollY > 24);
+  };
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+}
