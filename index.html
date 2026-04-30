@@ -23,7 +23,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300;500&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
 
   <script type="application/ld+json">
     {
@@ -43,8 +42,31 @@
     }
   </script>
 </head>
-<body>
+<body data-barba="wrapper">
   <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
+
+  <div class="page-loader" data-page-loader aria-hidden="true">
+    <div class="page-loader__brand">
+      <span class="page-loader__mark">
+        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+          <path d="M8 6 V32 H30" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <circle cx="34" cy="32" r="3.5" fill="currentColor"/>
+        </svg>
+      </span>
+      <span class="page-loader__word">FARG Co.</span>
+    </div>
+    <div class="page-loader__bar"><span class="page-loader__bar-fill"></span></div>
+    <div class="page-loader__count" data-loader-count>00</div>
+  </div>
+
+  <canvas class="bg-canvas" data-bg-canvas aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" data-cursor aria-hidden="true">
+    <div class="cursor__dot"></div>
+    <div class="cursor__ring"></div>
+    <div class="cursor__label" data-cursor-label></div>
+  </div>
+  <div class="scroll-progress" data-scroll-progress aria-hidden="true"></div>
 
   <header class="site-header" id="topo">
     <div class="layout-container">
@@ -64,7 +86,7 @@
             <li class="site-nav__item"><a class="site-nav__link" href="#processo">Processo</a></li>
           </ul>
 
-          <a class="site-nav__cta" href="https://wa.me/5541995892937" target="_blank" rel="noopener" aria-label="Falar com a FARG Co. no WhatsApp">
+          <a class="site-nav__cta is-magnetic" data-magnetic data-cursor-hover="Chamar" href="https://wa.me/5541995892937" target="_blank" rel="noopener" aria-label="Falar com a FARG Co. no WhatsApp">
             <svg class="site-nav__cta-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M20.52 3.48A11.79 11.79 0 0 0 12.04 0C5.5 0 .2 5.3.2 11.84c0 2.09.55 4.13 1.6 5.93L0 24l6.4-1.68a11.83 11.83 0 0 0 5.64 1.43h.01c6.54 0 11.84-5.3 11.84-11.84 0-3.16-1.23-6.13-3.37-8.43Zm-8.48 18.2h-.01a9.83 9.83 0 0 1-5.01-1.37l-.36-.21-3.8 1 1.02-3.7-.23-.38a9.81 9.81 0 0 1-1.5-5.18c0-5.43 4.42-9.85 9.86-9.85 2.63 0 5.1 1.03 6.96 2.89a9.78 9.78 0 0 1 2.88 6.97c0 5.44-4.42 9.83-9.85 9.83Zm5.4-7.37c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.66.15-.2.3-.76.96-.93 1.16-.17.2-.34.22-.63.07-.3-.15-1.25-.46-2.38-1.46-.88-.78-1.47-1.75-1.65-2.05-.17-.3-.02-.45.13-.6.13-.13.3-.34.45-.5.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.07-.15-.66-1.6-.9-2.18-.24-.58-.49-.5-.66-.5-.17-.01-.37-.01-.57-.01-.2 0-.53.07-.81.38-.27.3-1.05 1.02-1.05 2.5 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.62.71.23 1.36.2 1.87.12.57-.08 1.75-.71 2-1.4.25-.7.25-1.28.17-1.4-.07-.13-.27-.2-.57-.35Z"/>
             </svg>
@@ -75,48 +97,84 @@
     </div>
   </header>
 
-  <main id="conteudo-principal">
-    <section class="section section--hero" id="home" aria-labelledby="titulo-home">
+  <main id="conteudo-principal" data-barba="container" data-barba-namespace="home">
+    <section class="section section--hero" id="home" aria-labelledby="titulo-home" data-hero>
       <div class="hero__grid" aria-hidden="true"></div>
+      <div class="hero__aurora" aria-hidden="true"></div>
       <div class="layout-container hero__layout">
-        <div class="hero__copy fade-up">
-          <span class="hero__eyebrow">// AGÊNCIA DIGITAL · CURITIBA / PR</span>
-          <h1 class="section__title hero__title" id="titulo-home">
-            Alcance clientes <br>e aumente suas vendas com
-            <span class="hero__rotator" aria-live="polite">
-              <span data-rotating-word data-words="marketing,software,Google Ads,sistemas,apps,landing page">marketing</span>
+        <div class="hero__copy">
+          <span class="hero__eyebrow" data-hero-eyebrow>
+            <span class="hero__eyebrow-dot" aria-hidden="true"></span>
+            AGÊNCIA DIGITAL · CURITIBA / PR
+          </span>
+          <h1 class="section__title hero__title" id="titulo-home" data-hero-title>
+            <span class="hero__line" data-hero-line>Alcance clientes</span>
+            <span class="hero__line" data-hero-line>e aumente vendas com</span>
+            <span class="hero__line hero__line--accent" data-hero-line>
+              <span class="hero__rotator" aria-live="polite">
+                <span data-rotating-word data-words="marketing,software,Google Ads,sistemas,apps,landing page">marketing</span>
+              </span>
             </span>
           </h1>
-          <p class="section__description hero__description">Criamos presença digital, sistemas e campanhas para empresas que precisam vender mais com uma operação mais clara.</p>
-          <div class="hero__actions">
-            <a class="hero__cta" href="https://wa.me/5541995892937" target="_blank" rel="noopener">Receber proposta no WhatsApp →</a>
-            <a class="hero__cta-secondary" href="#servicos">
+          <p class="section__description hero__description" data-hero-desc>Criamos presença digital, sistemas e campanhas para empresas que precisam vender mais com uma operação mais clara.</p>
+          <div class="hero__actions" data-hero-actions>
+            <a class="hero__cta is-magnetic" data-magnetic data-cursor-hover="WhatsApp" href="https://wa.me/5541995892937" target="_blank" rel="noopener">
+              <span class="hero__cta-label">
+                <span class="hero__cta-text">Receber proposta no WhatsApp</span>
+                <span class="hero__cta-text hero__cta-text--clone" aria-hidden="true">Receber proposta no WhatsApp</span>
+              </span>
+              <span class="hero__cta-icon" aria-hidden="true">→</span>
+            </a>
+            <a class="hero__cta-secondary is-magnetic" data-magnetic href="#servicos">
               <span>Ver serviços</span>
               <span class="hero__cta-arrow" aria-hidden="true">↓</span>
             </a>
           </div>
         </div>
 
-        <div class="hero__portfolio fade-up">
+        <div class="hero__portfolio" data-hero-portfolio>
           <p class="hero__portfolio-label">Acesse nosso portfólio</p>
-          <a class="hero__portfolio-link" href="sites.html" aria-label="Acessar o portfólio da FARG Co.">
+          <a class="hero__portfolio-link is-magnetic" data-magnetic data-cursor-hover="Portfólio" href="sites.html" aria-label="Acessar o portfólio da FARG Co.">
+            <span class="hero__portfolio-glow" aria-hidden="true"></span>
             <img src="assets/FARG (1)-Photoroom.png" alt="FARG Co.">
           </a>
         </div>
 
-        <div class="hero__stats" aria-label="Indicadores da agência">
-          <div class="hero__stat fade-up">
+        <div class="hero__stats" aria-label="Indicadores da agência" data-hero-stats>
+          <div class="hero__stat">
             <span class="hero__stat-num" data-counter-target="14">0</span><span class="hero__stat-plus">+</span>
             <span class="hero__stat-label">projetos entregues</span>
           </div>
-          <div class="hero__stat fade-up">
+          <div class="hero__stat">
             <span class="hero__stat-num">4</span>
             <span class="hero__stat-label">sócios fundadores</span>
           </div>
-          <div class="hero__stat fade-up">
+          <div class="hero__stat">
             <span class="hero__stat-num">30d</span>
             <span class="hero__stat-label">garantia pós-entrega</span>
           </div>
+        </div>
+      </div>
+
+      <div class="hero__scroll-cue" data-scroll-cue aria-hidden="true">
+        <span class="hero__scroll-cue-line"></span>
+        <span class="hero__scroll-cue-text">Scroll</span>
+      </div>
+
+      <div class="hero__marquee" aria-hidden="true">
+        <div class="hero__marquee-track" data-marquee>
+          <span>Sites Institucionais</span><span class="hero__marquee-dot">●</span>
+          <span>Sistemas Web</span><span class="hero__marquee-dot">●</span>
+          <span>Tráfego Pago</span><span class="hero__marquee-dot">●</span>
+          <span>Branding Digital</span><span class="hero__marquee-dot">●</span>
+          <span>UX / UI</span><span class="hero__marquee-dot">●</span>
+          <span>Performance</span><span class="hero__marquee-dot">●</span>
+          <span>Sites Institucionais</span><span class="hero__marquee-dot">●</span>
+          <span>Sistemas Web</span><span class="hero__marquee-dot">●</span>
+          <span>Tráfego Pago</span><span class="hero__marquee-dot">●</span>
+          <span>Branding Digital</span><span class="hero__marquee-dot">●</span>
+          <span>UX / UI</span><span class="hero__marquee-dot">●</span>
+          <span>Performance</span><span class="hero__marquee-dot">●</span>
         </div>
       </div>
     </section>
@@ -125,7 +183,7 @@
       <div class="layout-container">
         <header class="section__header fade-up">
           <span class="section__label">// 01 — SERVIÇOS</span>
-          <h2 class="section__title" id="titulo-servicos">O que entregamos</h2>
+          <h2 class="section__title" id="titulo-servicos" data-reveal-text>O que entregamos</h2>
           <p class="section__description">Cada projeto é orçado após um briefing gratuito de 20 min. Sem fórmula pronta — escopo fechado pra sua realidade.</p>
         </header>
 
@@ -143,7 +201,7 @@
               <li>Performance 90+ Lighthouse</li>
               <li>Treinamento da sua equipe</li>
             </ul>
-            <a class="service-card__cta" href="https://wa.me/5541995892937?text=Quero%20um%20site%20institucional" target="_blank" rel="noopener">Receber proposta no WhatsApp →</a>
+            <a class="service-card__cta is-magnetic" data-magnetic data-cursor-hover="WhatsApp" href="https://wa.me/5541995892937?text=Quero%20um%20site%20institucional" target="_blank" rel="noopener">Receber proposta no WhatsApp →</a>
           </article>
 
           <article class="service-card fade-up">
@@ -159,7 +217,7 @@
               <li>Testes + documentação</li>
               <li>Deploy + monitoramento</li>
             </ul>
-            <a class="service-card__cta" href="https://wa.me/5541995892937?text=Quero%20um%20sistema%20web" target="_blank" rel="noopener">Receber proposta no WhatsApp →</a>
+            <a class="service-card__cta is-magnetic" data-magnetic data-cursor-hover="WhatsApp" href="https://wa.me/5541995892937?text=Quero%20um%20sistema%20web" target="_blank" rel="noopener">Receber proposta no WhatsApp →</a>
           </article>
         </div>
 
@@ -183,17 +241,34 @@
       <div class="layout-container">
         <header class="section__header fade-up">
           <span class="section__label">// 02 — CASES</span>
-          <h2 class="section__title" id="titulo-cases">Nosso trabalho</h2>
+          <h2 class="section__title" id="titulo-cases" data-reveal-text>Nosso trabalho</h2>
           <p class="section__description">Casos reais com antes, depois e o impacto medido no negócio.</p>
         </header>
 
-        <article class="case-card fade-up">
-          <div class="case-card__media">
-            <div class="case-card__media-slot" aria-label="Antes da reformulação">Antes</div>
-            <div class="case-card__media-slot case-card__media-slot--after" aria-label="Depois da reformulação">Depois</div>
+        <article class="case-card case-card--design fade-up">
+          <div class="case-card__media" aria-hidden="true">
+            <div class="case-mock case-mock--before" aria-label="Antes da reformulação">
+              <span class="case-mock__label">ANTES</span>
+              <span class="case-mock__chrome"></span>
+              <span class="case-mock__shape case-mock__shape--a"></span>
+              <span class="case-mock__shape case-mock__shape--b"></span>
+              <span class="case-mock__shape case-mock__shape--c"></span>
+              <span class="case-mock__shape case-mock__shape--d"></span>
+              <span class="case-mock__noise"></span>
+            </div>
+            <div class="case-mock case-mock--after" aria-label="Depois da reformulação">
+              <span class="case-mock__label">DEPOIS</span>
+              <span class="case-mock__chrome"></span>
+              <span class="case-mock__grid"></span>
+              <span class="case-mock__hero"></span>
+              <span class="case-mock__bar case-mock__bar--1"></span>
+              <span class="case-mock__bar case-mock__bar--2"></span>
+              <span class="case-mock__bar case-mock__bar--3"></span>
+              <span class="case-mock__pulse"></span>
+            </div>
           </div>
           <div class="case-card__body">
-            <span class="case-card__tag">CASE 01</span>
+            <span class="case-card__tag">CASE 01 · 2025</span>
             <h3 class="case-card__title">Agência de viagens</h3>
             <ul class="case-card__stack" aria-label="Stack utilizada">
               <li>Next.js</li>
@@ -201,10 +276,15 @@
               <li>Vercel</li>
               <li>Meta Ads</li>
             </ul>
+            <dl class="case-card__metrics" aria-label="Resultados">
+              <div><dt>Leads / mês</dt><dd>+278<span>%</span></dd></div>
+              <div><dt>Tempo no site</dt><dd>+1m42<span>s</span></dd></div>
+              <div><dt>Lighthouse</dt><dd>96<span>/100</span></dd></div>
+            </dl>
             <blockquote class="case-card__quote">
               <p>"Em poucas semanas tivemos um site novo, mais leads e clareza no funil." <span class="case-card__author">— cliente FARG Co.</span></p>
             </blockquote>
-            <a class="case-card__cta" href="#">Ver case completo →</a>
+            <a class="case-card__cta is-magnetic" data-magnetic data-cursor-hover="Ver" href="#">Ver case completo →</a>
           </div>
         </article>
       </div>
@@ -214,7 +294,7 @@
       <div class="layout-container">
         <header class="section__header fade-up">
           <span class="section__label">// 03 — TIME</span>
-          <h2 class="section__title" id="titulo-time">Quem está por trás</h2>
+          <h2 class="section__title" id="titulo-time" data-reveal-text>Quem está por trás</h2>
           <p class="section__description">Quatro sócios, áreas complementares, mesma obsessão: entregar resultado.</p>
         </header>
 
@@ -251,7 +331,7 @@
       <div class="layout-container">
         <header class="section__header fade-up">
           <span class="section__label">// 04 — PROCESSO</span>
-          <h2 class="section__title" id="titulo-processo">Como trabalhamos</h2>
+          <h2 class="section__title" id="titulo-processo" data-reveal-text>Como trabalhamos</h2>
           <p class="section__description">Seis etapas claras do briefing até o treinamento da sua equipe.</p>
         </header>
 
@@ -317,9 +397,15 @@
       <div class="layout-container">
         <div class="cta-block fade-up">
           <span class="section__label section__label--center">// 05 — VAMOS CONVERSAR</span>
-          <h2 class="cta-block__title" id="titulo-cta">Pronto para crescer no <span class="hero__title-accent">digital</span>?</h2>
+          <h2 class="cta-block__title" id="titulo-cta" data-reveal-text>Pronto para crescer no <span class="hero__title-accent">digital</span>?</h2>
           <p class="cta-block__description">Conta pra gente onde sua empresa está hoje — a gente desenha o caminho.</p>
-          <a class="hero__cta" href="https://wa.me/5541995892937" target="_blank" rel="noopener">Falar no WhatsApp →</a>
+          <a class="hero__cta is-magnetic" data-magnetic data-cursor-hover="WhatsApp" href="https://wa.me/5541995892937" target="_blank" rel="noopener">
+            <span class="hero__cta-label">
+              <span class="hero__cta-text">Falar no WhatsApp</span>
+              <span class="hero__cta-text hero__cta-text--clone" aria-hidden="true">Falar no WhatsApp</span>
+            </span>
+            <span class="hero__cta-icon" aria-hidden="true">→</span>
+          </a>
           <p class="cta-block__meta">
             <span class="status-dot" aria-hidden="true"></span>
             Resposta em até 24h · Briefing gratuito
@@ -343,6 +429,6 @@
     </div>
   </footer>
 
-  <script src="script.js" defer></script>
+  <script type="module" src="/src/main.js"></script>
 </body>
 </html>

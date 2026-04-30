@@ -16,12 +16,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300;500&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
 </head>
-<body class="showcase-page showcase-page--portfolio">
+<body class="showcase-page showcase-page--portfolio" data-barba="wrapper">
   <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
 
-  <main id="conteudo-principal">
+  <canvas class="bg-canvas" data-bg-canvas aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" data-cursor aria-hidden="true">
+    <div class="cursor__dot"></div>
+    <div class="cursor__ring"></div>
+    <div class="cursor__label" data-cursor-label></div>
+  </div>
+  <div class="scroll-progress" data-scroll-progress aria-hidden="true"></div>
+
+  <main id="conteudo-principal" data-barba="container" data-barba-namespace="portfolio">
     <section class="section section--showcase" id="vitrine" aria-labelledby="titulo-vitrine" data-site-showcase>
       <div class="showcase__grid" aria-hidden="true"></div>
 
@@ -470,6 +478,6 @@
     </section>
   </main>
 
-  <script src="script.js" defer></script>
+  <script type="module" src="/src/main.js"></script>
 </body>
 </html>
