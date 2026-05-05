@@ -21,6 +21,6 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
-    include: ['gsap', 'gsap/ScrollTrigger', 'lenis', 'split-type', 'ogl', '@barba/core'],
+    include: ['gsap', 'gsap/ScrollTrigger'],
   },
 });

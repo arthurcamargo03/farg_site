@@ -1,33 +1,44 @@
-import gsap from 'gsap';
-import { prefersReducedMotion, finePointer } from '../lib/motion.js';
+import { prefersReducedMotion } from '../lib/motion.js';
 
-export const initYear = () => {
-  const el = document.querySelector('#ano-atual');
+export const initYear = (root = document) => {
+  const el = root.querySelector('#ano-atual');
   if (el) el.textContent = String(new Date().getFullYear());
+  return null;
 };
 
-export const initHamburger = () => {
-  const hamburger = document.querySelector('.nav-hamburger');
+export const initHamburger = (root = document) => {
+  const hamburger = root.querySelector('.nav-hamburger') || document.querySelector('.nav-hamburger');
   const navCollapse = document.querySelector('.nav-collapse');
-  if (!hamburger || !navCollapse) return;
+  if (!hamburger || !navCollapse) return null;
 
-  hamburger.addEventListener('click', () => {
+  const onHamburgerClick = () => {
     const isOpen = hamburger.getAttribute('aria-expanded') === 'true';
     hamburger.setAttribute('aria-expanded', String(!isOpen));
     navCollapse.classList.toggle('is-open', !isOpen);
-  });
+  };
+  hamburger.addEventListener('click', onHamburgerClick);
 
+  const linkHandlers = [];
   navCollapse.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
+    const onClick = () => {
       hamburger.setAttribute('aria-expanded', 'false');
       navCollapse.classList.remove('is-open');
-    });
+    };
+    link.addEventListener('click', onClick);
+    linkHandlers.push([link, onClick]);
   });
+
+  return () => {
+    hamburger.removeEventListener('click', onHamburgerClick);
+    linkHandlers.forEach(([link, fn]) => link.removeEventListener('click', fn));
+  };
 };
 
-export const initCounters = () => {
-  const counters = document.querySelectorAll('[data-counter-target]');
-  if (!counters.length) return;
+export const initCounters = (root = document) => {
+  const counters = root.querySelectorAll('[data-counter-target]');
+  if (!counters.length) return null;
+
+  const rafIds = new Set();
 
   const animate = (el) => {
     const target = parseInt(el.getAttribute('data-counter-target'), 10) || 0;
@@ -37,10 +48,15 @@ export const initCounters = () => {
       const p = Math.min((now - start) / duration, 1);
       const eased = 1 - Math.pow(1 - p, 3);
       el.textContent = String(Math.floor(eased * target));
-      if (p < 1) requestAnimationFrame(tick);
-      else el.textContent = String(target);
+      if (p < 1) {
+        const id = requestAnimationFrame(tick);
+        rafIds.add(id);
+      } else {
+        el.textContent = String(target);
+      }
     };
-    requestAnimationFrame(tick);
+    const id = requestAnimationFrame(tick);
+    rafIds.add(id);
   };
 
   const obs = new IntersectionObserver((entries) => {
@@ -52,39 +68,28 @@ export const initCounters = () => {
     });
   }, { threshold: 0.5 });
   counters.forEach((el) => obs.observe(el));
+
+  return () => {
+    obs.disconnect();
+    rafIds.forEach((id) => cancelAnimationFrame(id));
+  };
 };
 
-export const initMarquee = () => {
-  document.querySelectorAll('[data-marquee]').forEach((track) => {
+export const initMarquee = (root = document) => {
+  const cleanups = [];
+  root.querySelectorAll('[data-marquee]').forEach((track) => {
     const parent = track.parentElement;
     if (!parent) return;
-    parent.addEventListener('pointerenter', () => track.classList.add('is-paused'));
-    parent.addEventListener('pointerleave', () => track.classList.remove('is-paused'));
+    const onEnter = () => track.classList.add('is-paused');
+    const onLeave = () => track.classList.remove('is-paused');
+    parent.addEventListener('pointerenter', onEnter);
+    parent.addEventListener('pointerleave', onLeave);
+    cleanups.push(() => {
+      parent.removeEventListener('pointerenter', onEnter);
+      parent.removeEventListener('pointerleave', onLeave);
+    });
   });
-};
-
-export const initPortfolioTilt = () => {
-  if (prefersReducedMotion() || !finePointer) return;
-  const card = document.querySelector('.hero__portfolio-link');
-  if (!card) return;
-  const img = card.querySelector('img');
-  const glow = card.querySelector('.hero__portfolio-glow');
-
-  card.addEventListener('pointermove', (e) => {
-    const rect = card.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width - 0.5;
-    const y = (e.clientY - rect.top) / rect.height - 0.5;
-    gsap.to(card, { rotationY: x * 14, rotationX: -y * 14, duration: 0.4, ease: 'power3.out', transformPerspective: 800 });
-    if (img) gsap.to(img, { x: x * 18, y: y * 18, duration: 0.6, ease: 'power3.out' });
-    if (glow) {
-      glow.style.setProperty('--gx', `${(x + 0.5) * 100}%`);
-      glow.style.setProperty('--gy', `${(y + 0.5) * 100}%`);
-    }
-  });
-  card.addEventListener('pointerleave', () => {
-    gsap.to(card, { rotationY: 0, rotationX: 0, duration: 0.8, ease: 'power3.out' });
-    if (img) gsap.to(img, { x: 0, y: 0, duration: 0.8, ease: 'power3.out' });
-  });
+  return cleanups.length ? () => cleanups.forEach((fn) => fn()) : null;
 };
 
 export const initPageLoader = (onDone) => {
@@ -99,19 +104,30 @@ export const initPageLoader = (onDone) => {
   const count = loader.querySelector('[data-loader-count]');
   const start = performance.now();
   const duration = prefersReducedMotion() ? 320 : 1100;
+  let done = false;
+
+  const finish = () => {
+    if (done) return;
+    done = true;
+    if (fill) fill.style.transform = 'scaleX(1)';
+    if (count) count.textContent = '100';
+    document.body.classList.add('is-loaded');
+    loader.classList.add('is-done');
+    onDone?.();
+    setTimeout(() => loader.remove(), 720);
+  };
 
   const tick = (now) => {
+    if (done) return;
     const t = Math.min((now - start) / duration, 1);
     const eased = 1 - Math.pow(1 - t, 2.5);
     if (fill) fill.style.transform = `scaleX(${eased})`;
     if (count) count.textContent = String(Math.floor(eased * 100)).padStart(2, '0');
     if (t < 1) requestAnimationFrame(tick);
-    else {
-      document.body.classList.add('is-loaded');
-      loader.classList.add('is-done');
-      onDone?.();
-      setTimeout(() => loader.remove(), 720);
-    }
+    else finish();
   };
+
+  window.setTimeout(finish, duration + 500);
+  if (document.hidden) finish();
   requestAnimationFrame(tick);
 };

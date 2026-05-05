@@ -1,28 +1,29 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FARG Co. | Agência Digital para PMEs</title>
-  <meta name="description" content="Sites, sistemas e tráfego pago para PMEs crescerem no digital. FARG Co. — presença digital que gera resultado.">
+  <title>FARG Co. — Sites que vendem. Sistemas que medem.</title>
+  <meta name="description" content="Agência digital em Curitiba. Construímos sites, sistemas e tráfego pago para PMEs que querem parar de adivinhar e começar a escalar. Diagnóstico gratuito em 24h.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="author" content="FARG Co.">
+  <meta name="theme-color" content="#0A0A0F">
   <link rel="canonical" href="https://www.fargco.com.br/">
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
-  <meta property="og:title" content="FARG Co. | Agência Digital">
-  <meta property="og:description" content="Sites, sistemas e tráfego pago para PMEs crescerem no digital.">
+  <meta property="og:title" content="FARG Co. — Sites que vendem. Sistemas que medem.">
+  <meta property="og:description" content="Para PMEs em Curitiba que querem parar de adivinhar e começar a escalar no digital.">
   <meta property="og:url" content="https://www.fargco.com.br/">
   <meta property="og:site_name" content="FARG Co.">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="FARG Co. | Agência Digital">
-  <meta name="twitter:description" content="Sites, sistemas e tráfego para PMEs crescerem no digital.">
+  <meta name="twitter:title" content="FARG Co. — Engenharia de presença digital">
+  <meta name="twitter:description" content="Sites que vendem. Sistemas que medem. Tráfego que paga sozinho.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300;500&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <script type="application/ld+json">
     {
@@ -30,10 +31,15 @@
       "@type": "Organization",
       "name": "FARG Co.",
       "url": "https://www.fargco.com.br/",
+      "logo": "https://www.fargco.com.br/assets/FARG (1)-Photoroom.png",
+      "description": "Agência digital especializada em sites, sistemas e tráfego pago para PMEs.",
+      "address": { "@type": "PostalAddress", "addressLocality": "Curitiba", "addressRegion": "PR", "addressCountry": "BR" },
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+55-41-99589-2937",
-        "contactType": "vendas"
+        "contactType": "vendas",
+        "areaServed": "BR",
+        "availableLanguage": "Portuguese"
       },
       "sameAs": [
         "https://www.instagram.com/fargco",
@@ -42,7 +48,7 @@
     }
   </script>
 </head>
-<body data-barba="wrapper">
+<body>
   <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
 
   <div class="page-loader" data-page-loader aria-hidden="true">
@@ -59,18 +65,20 @@
     <div class="page-loader__count" data-loader-count>00</div>
   </div>
 
-  <canvas class="bg-canvas" data-bg-canvas aria-hidden="true"></canvas>
   <div class="grain" aria-hidden="true"></div>
-  <div class="cursor" data-cursor aria-hidden="true">
-    <div class="cursor__dot"></div>
-    <div class="cursor__ring"></div>
-    <div class="cursor__label" data-cursor-label></div>
-  </div>
   <div class="scroll-progress" data-scroll-progress aria-hidden="true"></div>
 
   <header class="site-header" id="topo">
     <div class="layout-container">
       <nav class="site-nav" aria-label="Navegação principal">
+        <a class="site-nav__brand" href="#topo" aria-label="FARG Co. — Início">
+          <svg width="22" height="22" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+            <path d="M8 6 V32 H30" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <circle cx="34" cy="32" r="3.5" fill="currentColor"/>
+          </svg>
+          <span>FARG Co.</span>
+        </a>
+
         <button class="nav-hamburger" aria-label="Abrir menu" aria-expanded="false">
           <span></span>
           <span></span>
@@ -79,86 +87,80 @@
 
         <div class="nav-collapse">
           <ul class="site-nav__list">
-            <li class="site-nav__item"><a class="site-nav__link" href="#home">Home</a></li>
+            <li class="site-nav__item"><a class="site-nav__link" href="#problema">Problema</a></li>
             <li class="site-nav__item"><a class="site-nav__link" href="#servicos">Serviços</a></li>
             <li class="site-nav__item"><a class="site-nav__link" href="#cases">Cases</a></li>
-            <li class="site-nav__item"><a class="site-nav__link" href="#time">Time</a></li>
             <li class="site-nav__item"><a class="site-nav__link" href="#processo">Processo</a></li>
+            <li class="site-nav__item"><a class="site-nav__link" href="#time">Time</a></li>
           </ul>
 
-          <a class="site-nav__cta is-magnetic" data-magnetic data-cursor-hover="Chamar" href="https://wa.me/5541995892937" target="_blank" rel="noopener" aria-label="Falar com a FARG Co. no WhatsApp">
-            <svg class="site-nav__cta-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <a class="site-nav__cta is-magnetic" data-magnetic href="https://wa.me/5541995892937?text=Quero%20meu%20diagn%C3%B3stico%20gratuito" target="_blank" rel="noopener" aria-label="Falar com a FARG Co. no WhatsApp">
+            <svg class="site-nav__cta-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M20.52 3.48A11.79 11.79 0 0 0 12.04 0C5.5 0 .2 5.3.2 11.84c0 2.09.55 4.13 1.6 5.93L0 24l6.4-1.68a11.83 11.83 0 0 0 5.64 1.43h.01c6.54 0 11.84-5.3 11.84-11.84 0-3.16-1.23-6.13-3.37-8.43Zm-8.48 18.2h-.01a9.83 9.83 0 0 1-5.01-1.37l-.36-.21-3.8 1 1.02-3.7-.23-.38a9.81 9.81 0 0 1-1.5-5.18c0-5.43 4.42-9.85 9.86-9.85 2.63 0 5.1 1.03 6.96 2.89a9.78 9.78 0 0 1 2.88 6.97c0 5.44-4.42 9.83-9.85 9.83Zm5.4-7.37c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.66.15-.2.3-.76.96-.93 1.16-.17.2-.34.22-.63.07-.3-.15-1.25-.46-2.38-1.46-.88-.78-1.47-1.75-1.65-2.05-.17-.3-.02-.45.13-.6.13-.13.3-.34.45-.5.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.07-.15-.66-1.6-.9-2.18-.24-.58-.49-.5-.66-.5-.17-.01-.37-.01-.57-.01-.2 0-.53.07-.81.38-.27.3-1.05 1.02-1.05 2.5 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.62.71.23 1.36.2 1.87.12.57-.08 1.75-.71 2-1.4.25-.7.25-1.28.17-1.4-.07-.13-.27-.2-.57-.35Z"/>
             </svg>
-            <span>WhatsApp</span>
+            <span>Diagnóstico</span>
           </a>
         </div>
       </nav>
     </div>
   </header>
 
-  <main id="conteudo-principal" data-barba="container" data-barba-namespace="home">
+  <main id="conteudo-principal">
+
+    <!-- ─── HERO ─── -->
     <section class="section section--hero" id="home" aria-labelledby="titulo-home" data-hero>
-      <div class="hero__grid" aria-hidden="true"></div>
-      <div class="hero__aurora" aria-hidden="true"></div>
+      <div class="hero-scene" data-hero-scene aria-hidden="true">
+        <canvas class="hero-canvas" data-typo-canvas></canvas>
+      </div>
+
       <div class="layout-container hero__layout">
         <div class="hero__copy">
-          <span class="hero__eyebrow" data-hero-eyebrow>
+          <span class="label-mono hero__eyebrow" data-hero-eyebrow>
             <span class="hero__eyebrow-dot" aria-hidden="true"></span>
-            AGÊNCIA DIGITAL · CURITIBA / PR
+            FARG CO. · CURITIBA · 14 PROJETOS ENTREGUES
           </span>
-          <h1 class="section__title hero__title" id="titulo-home" data-hero-title>
-            <span class="hero__line" data-hero-line>Alcance clientes</span>
-            <span class="hero__line" data-hero-line>e aumente vendas com</span>
+          <h1 class="hero__title" id="titulo-home" data-hero-title>
+            <span class="hero__line" data-hero-line>Sites que vendem.</span>
+            <span class="hero__line" data-hero-line>Sistemas que medem.</span>
             <span class="hero__line hero__line--accent" data-hero-line>
-              <span class="hero__rotator" aria-live="polite">
-                <span data-rotating-word data-words="marketing,software,Google Ads,sistemas,apps,landing page">marketing</span>
-              </span>
+              Tráfego que paga sozinho.
             </span>
           </h1>
-          <p class="section__description hero__description" data-hero-desc>Criamos presença digital, sistemas e campanhas para empresas que precisam vender mais com uma operação mais clara.</p>
+          <p class="hero__description" data-hero-desc>
+            Para PMEs em Curitiba que querem parar de adivinhar e começar a escalar.
+            Engenharia de presença digital, com escopo fechado e métricas no painel.
+          </p>
           <div class="hero__actions" data-hero-actions>
-            <a class="hero__cta is-magnetic" data-magnetic data-cursor-hover="WhatsApp" href="https://wa.me/5541995892937" target="_blank" rel="noopener">
-              <span class="hero__cta-label">
-                <span class="hero__cta-text">Receber proposta no WhatsApp</span>
-                <span class="hero__cta-text hero__cta-text--clone" aria-hidden="true">Receber proposta no WhatsApp</span>
-              </span>
-              <span class="hero__cta-icon" aria-hidden="true">→</span>
+            <a class="btn btn--primary is-magnetic" data-magnetic href="https://wa.me/5541995892937?text=Quero%20meu%20diagn%C3%B3stico%20gratuito" target="_blank" rel="noopener">
+              <span>Quero meu diagnóstico</span>
+              <span class="btn__arrow" aria-hidden="true">→</span>
             </a>
-            <a class="hero__cta-secondary is-magnetic" data-magnetic href="#servicos">
-              <span>Ver serviços</span>
-              <span class="hero__cta-arrow" aria-hidden="true">↓</span>
+            <a class="btn btn--ghost is-magnetic" data-magnetic href="#cases">
+              <span>Ver os 14 projetos</span>
+              <span class="btn__arrow" aria-hidden="true">↓</span>
             </a>
           </div>
-        </div>
 
-        <div class="hero__portfolio" data-hero-portfolio>
-          <p class="hero__portfolio-label">Acesse nosso portfólio</p>
-          <a class="hero__portfolio-link is-magnetic" data-magnetic data-cursor-hover="Portfólio" href="sites.html" aria-label="Acessar o portfólio da FARG Co.">
-            <span class="hero__portfolio-glow" aria-hidden="true"></span>
-            <img src="assets/FARG (1)-Photoroom.png" alt="FARG Co.">
-          </a>
-        </div>
-
-        <div class="hero__stats" aria-label="Indicadores da agência" data-hero-stats>
-          <div class="hero__stat">
-            <span class="hero__stat-num" data-counter-target="14">0</span><span class="hero__stat-plus">+</span>
-            <span class="hero__stat-label">projetos entregues</span>
-          </div>
-          <div class="hero__stat">
-            <span class="hero__stat-num">4</span>
-            <span class="hero__stat-label">sócios fundadores</span>
-          </div>
-          <div class="hero__stat">
-            <span class="hero__stat-num">30d</span>
-            <span class="hero__stat-label">garantia pós-entrega</span>
+          <div class="hero__stats" aria-label="Indicadores da agência" data-hero-stats>
+            <div class="hero__stat">
+              <span class="hero__stat-num" data-counter-target="14">0</span><span class="hero__stat-plus">+</span>
+              <span class="hero__stat-label">projetos entregues</span>
+            </div>
+            <div class="hero__stat">
+              <span class="hero__stat-num" data-counter-target="278">0</span><span class="hero__stat-plus">%</span>
+              <span class="hero__stat-label">média de leads gerados</span>
+            </div>
+            <div class="hero__stat">
+              <span class="hero__stat-num">24h</span>
+              <span class="hero__stat-label">resposta + diagnóstico</span>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="hero__scroll-cue" data-scroll-cue aria-hidden="true">
         <span class="hero__scroll-cue-line"></span>
-        <span class="hero__scroll-cue-text">Scroll</span>
+        <span class="hero__scroll-cue-text">Role</span>
       </div>
 
       <div class="hero__marquee" aria-hidden="true">
@@ -166,136 +168,253 @@
           <span>Sites Institucionais</span><span class="hero__marquee-dot">●</span>
           <span>Sistemas Web</span><span class="hero__marquee-dot">●</span>
           <span>Tráfego Pago</span><span class="hero__marquee-dot">●</span>
-          <span>Branding Digital</span><span class="hero__marquee-dot">●</span>
+          <span>SEO Técnico</span><span class="hero__marquee-dot">●</span>
           <span>UX / UI</span><span class="hero__marquee-dot">●</span>
           <span>Performance</span><span class="hero__marquee-dot">●</span>
           <span>Sites Institucionais</span><span class="hero__marquee-dot">●</span>
           <span>Sistemas Web</span><span class="hero__marquee-dot">●</span>
           <span>Tráfego Pago</span><span class="hero__marquee-dot">●</span>
-          <span>Branding Digital</span><span class="hero__marquee-dot">●</span>
+          <span>SEO Técnico</span><span class="hero__marquee-dot">●</span>
           <span>UX / UI</span><span class="hero__marquee-dot">●</span>
           <span>Performance</span><span class="hero__marquee-dot">●</span>
         </div>
       </div>
     </section>
 
-    <section class="section" id="servicos" aria-labelledby="titulo-servicos">
+    <!-- ─── PROBLEMA ─── -->
+    <section class="section section--problem" id="problema" aria-labelledby="titulo-problema">
       <div class="layout-container">
-        <header class="section__header fade-up">
-          <span class="section__label">// 01 — SERVIÇOS</span>
-          <h2 class="section__title" id="titulo-servicos" data-reveal-text>O que entregamos</h2>
-          <p class="section__description">Cada projeto é orçado após um briefing gratuito de 20 min. Sem fórmula pronta — escopo fechado pra sua realidade.</p>
+        <header class="section__header section__header--narrow fade-up">
+          <span class="label-mono">// 01 — PROBLEMA</span>
+          <h2 class="section__title" id="titulo-problema" data-reveal-text>Seu site não está vendendo. E você sabe disso.</h2>
         </header>
 
-        <div class="services-grid">
-          <article class="service-card fade-up">
-            <span class="service-card__tag">PROJETO ÚNICO</span>
-            <h3 class="service-card__title">Site Institucional</h3>
-            <p class="service-card__price"><span class="service-card__price-prefix">A partir de</span> R$ 2.500</p>
-            <p class="service-card__deadline">Entrega em 3 a 5 semanas</p>
-            <ul class="service-card__list">
-              <li>Design exclusivo (sem template)</li>
-              <li>Até 6 páginas responsivas</li>
-              <li>Integração com WhatsApp</li>
-              <li>SEO técnico + Schema.org</li>
-              <li>Performance 90+ Lighthouse</li>
-              <li>Treinamento da sua equipe</li>
-            </ul>
-            <a class="service-card__cta is-magnetic" data-magnetic data-cursor-hover="WhatsApp" href="https://wa.me/5541995892937?text=Quero%20um%20site%20institucional" target="_blank" rel="noopener">Receber proposta no WhatsApp →</a>
-          </article>
+        <ul class="problem-list" aria-label="Sintomas comuns">
+          <li class="problem-list__item fade-up">
+            <span class="problem-list__num">A</span>
+            <p>O site demora 6 segundos pra abrir. Cliente desiste antes de chegar no botão.</p>
+          </li>
+          <li class="problem-list__item fade-up">
+            <span class="problem-list__num">B</span>
+            <p>Você gasta em anúncio mas não sabe quanto cada lead custou — nem quem virou cliente.</p>
+          </li>
+          <li class="problem-list__item fade-up">
+            <span class="problem-list__num">C</span>
+            <p>Atendimento, agenda, financeiro: tudo em planilha. Erro humano vira o gargalo.</p>
+          </li>
+          <li class="problem-list__item fade-up">
+            <span class="problem-list__num">D</span>
+            <p>Concorrente menor te ultrapassou no Google. Você não entende como.</p>
+          </li>
+        </ul>
 
-          <article class="service-card fade-up">
-            <span class="service-card__tag">SOB MEDIDA</span>
-            <h3 class="service-card__title">Sistema Web</h3>
-            <p class="service-card__price"><span class="service-card__price-prefix">Sob consulta</span></p>
-            <p class="service-card__deadline">Entrega em 6 a 16 semanas</p>
-            <ul class="service-card__list">
-              <li>Levantamento de requisitos</li>
-              <li>UI/UX dedicado</li>
-              <li>Front-end + back-end + DB</li>
-              <li>Integrações (API, pagamento)</li>
-              <li>Testes + documentação</li>
-              <li>Deploy + monitoramento</li>
-            </ul>
-            <a class="service-card__cta is-magnetic" data-magnetic data-cursor-hover="WhatsApp" href="https://wa.me/5541995892937?text=Quero%20um%20sistema%20web" target="_blank" rel="noopener">Receber proposta no WhatsApp →</a>
-          </article>
-        </div>
-
-        <article class="service-card service-card--maintenance fade-up">
-          <div class="service-card__maint-text">
-            <span class="service-card__tag">RECORRENTE</span>
-            <h3 class="service-card__title">Manutenção mensal</h3>
-            <p class="service-card__text">Atualizações, backups, ajustes de conteúdo e suporte técnico contínuo.</p>
-          </div>
-          <p class="service-card__price service-card__price--inline"><span class="service-card__price-prefix">A partir de</span> R$ 300<span class="service-card__price-suffix">/mês</span></p>
-        </article>
-
-        <p class="service-note fade-up">
-          <span class="status-dot" aria-hidden="true"></span>
-          Briefing inicial gratuito · Resposta em até 24h
+        <p class="problem-summary fade-up">
+          Sua empresa não tem um problema de marketing. Tem um problema de <strong>infraestrutura digital</strong>.
         </p>
       </div>
     </section>
 
+    <!-- ─── SOLUÇÃO ─── -->
+    <section class="section" id="servicos" aria-labelledby="titulo-servicos">
+      <div class="layout-container">
+        <header class="section__header fade-up">
+          <span class="label-mono">// 02 — SOLUÇÃO</span>
+          <h2 class="section__title" id="titulo-servicos" data-reveal-text>Três frentes. Uma operação.</h2>
+          <p class="section__description">Cada projeto é orçado após um diagnóstico gratuito de 20 minutos. Sem fórmula pronta — escopo fechado pra sua realidade.</p>
+        </header>
+
+        <div class="services-grid">
+          <article class="service-card fade-up">
+            <span class="service-card__index">01</span>
+            <span class="service-card__tag">PROJETO ÚNICO · 3–5 SEMANAS</span>
+            <h3 class="service-card__title">Site que converte visitante em lead</h3>
+            <p class="service-card__price"><span class="service-card__price-prefix">A partir de</span> R$ 2.500</p>
+            <ul class="service-card__list">
+              <li>Design exclusivo (zero template)</li>
+              <li>Até 6 páginas responsivas</li>
+              <li>Integração WhatsApp + GA4</li>
+              <li>SEO técnico + Schema.org</li>
+              <li>Lighthouse 90+ garantido</li>
+              <li>Treinamento da equipe inclusa</li>
+            </ul>
+            <a class="service-card__cta is-magnetic" data-magnetic href="https://wa.me/5541995892937?text=Quero%20um%20site%20que%20converta" target="_blank" rel="noopener">Quero um site assim →</a>
+          </article>
+
+          <article class="service-card service-card--featured fade-up">
+            <span class="service-card__index">02</span>
+            <span class="service-card__tag">SOB MEDIDA · 6–16 SEMANAS</span>
+            <h3 class="service-card__title">Sistema web que tira você da planilha</h3>
+            <p class="service-card__price"><span class="service-card__price-prefix">A partir de</span> R$ 12.000</p>
+            <ul class="service-card__list">
+              <li>Levantamento + UX dedicado</li>
+              <li>Front + back + banco de dados</li>
+              <li>Integrações (API, pagamento, CRM)</li>
+              <li>Painel com métricas em tempo real</li>
+              <li>Testes automatizados + docs</li>
+              <li>Deploy + monitoramento 30 dias</li>
+            </ul>
+            <a class="service-card__cta is-magnetic" data-magnetic href="https://wa.me/5541995892937?text=Quero%20um%20sistema%20web%20sob%20medida" target="_blank" rel="noopener">Quero ver se cabe no meu caso →</a>
+          </article>
+
+          <article class="service-card fade-up">
+            <span class="service-card__index">03</span>
+            <span class="service-card__tag">RECORRENTE · MENSAL</span>
+            <h3 class="service-card__title">Tráfego que paga sozinho</h3>
+            <p class="service-card__price"><span class="service-card__price-prefix">A partir de</span> R$ 1.800<span class="service-card__price-suffix">/mês</span></p>
+            <ul class="service-card__list">
+              <li>Meta Ads + Google Ads + GA4</li>
+              <li>Setup completo de pixel/eventos</li>
+              <li>Criativos + landing pages</li>
+              <li>Otimização semanal de campanhas</li>
+              <li>Relatório quinzenal com ROI real</li>
+              <li>Sem fidelidade — saia quando quiser</li>
+            </ul>
+            <a class="service-card__cta is-magnetic" data-magnetic href="https://wa.me/5541995892937?text=Quero%20gest%C3%A3o%20de%20tr%C3%A1fego%20pago" target="_blank" rel="noopener">Quero medir o ROI agora →</a>
+          </article>
+        </div>
+
+        <p class="service-note fade-up">
+          <span class="status-dot" aria-hidden="true"></span>
+          Diagnóstico gratuito · Resposta em até 24h · Sem compromisso
+        </p>
+      </div>
+    </section>
+
+    <!-- ─── PROVA ─── -->
     <section class="section section--muted" id="cases" aria-labelledby="titulo-cases">
       <div class="layout-container">
         <header class="section__header fade-up">
-          <span class="section__label">// 02 — CASES</span>
-          <h2 class="section__title" id="titulo-cases" data-reveal-text>Nosso trabalho</h2>
-          <p class="section__description">Casos reais com antes, depois e o impacto medido no negócio.</p>
+          <span class="label-mono">// 03 — PROVA</span>
+          <h2 class="section__title" id="titulo-cases" data-reveal-text>14 projetos. Métricas no painel.</h2>
+          <p class="section__description">Cada caso aqui tem nome, métrica antes/depois, e o cliente atendendo o WhatsApp pra confirmar.</p>
         </header>
 
-        <article class="case-card case-card--design fade-up">
-          <div class="case-card__media" aria-hidden="true">
-            <div class="case-mock case-mock--before" aria-label="Antes da reformulação">
-              <span class="case-mock__label">ANTES</span>
-              <span class="case-mock__chrome"></span>
-              <span class="case-mock__shape case-mock__shape--a"></span>
-              <span class="case-mock__shape case-mock__shape--b"></span>
-              <span class="case-mock__shape case-mock__shape--c"></span>
-              <span class="case-mock__shape case-mock__shape--d"></span>
-              <span class="case-mock__noise"></span>
+        <div class="case-grid">
+          <article class="case-row fade-up">
+            <span class="case-row__index">01</span>
+            <div class="case-row__head">
+              <h3 class="case-row__name">Clínica Vita</h3>
+              <span class="case-row__sector">Saúde · Curitiba</span>
             </div>
-            <div class="case-mock case-mock--after" aria-label="Depois da reformulação">
-              <span class="case-mock__label">DEPOIS</span>
-              <span class="case-mock__chrome"></span>
-              <span class="case-mock__grid"></span>
-              <span class="case-mock__hero"></span>
-              <span class="case-mock__bar case-mock__bar--1"></span>
-              <span class="case-mock__bar case-mock__bar--2"></span>
-              <span class="case-mock__bar case-mock__bar--3"></span>
-              <span class="case-mock__pulse"></span>
-            </div>
-          </div>
-          <div class="case-card__body">
-            <span class="case-card__tag">CASE 01 · 2025</span>
-            <h3 class="case-card__title">Agência de viagens</h3>
-            <ul class="case-card__stack" aria-label="Stack utilizada">
-              <li>Next.js</li>
-              <li>Tailwind</li>
-              <li>Vercel</li>
-              <li>Meta Ads</li>
-            </ul>
-            <dl class="case-card__metrics" aria-label="Resultados">
+            <dl class="case-row__metrics">
               <div><dt>Leads / mês</dt><dd>+278<span>%</span></dd></div>
-              <div><dt>Tempo no site</dt><dd>+1m42<span>s</span></dd></div>
+              <div><dt>Custo por lead</dt><dd>−54<span>%</span></dd></div>
               <div><dt>Lighthouse</dt><dd>96<span>/100</span></dd></div>
             </dl>
-            <blockquote class="case-card__quote">
-              <p>"Em poucas semanas tivemos um site novo, mais leads e clareza no funil." <span class="case-card__author">— cliente FARG Co.</span></p>
-            </blockquote>
-            <a class="case-card__cta is-magnetic" data-magnetic data-cursor-hover="Ver" href="#">Ver case completo →</a>
-          </div>
+            <p class="case-row__quote">"Em 6 semanas o site novo e o tráfego começaram a trazer pacientes que a indicação não estava trazendo. Triplicou agenda."</p>
+            <span class="case-row__author">— Dra. Helena Vita, sócia-fundadora</span>
+          </article>
+
+          <article class="case-row fade-up">
+            <span class="case-row__index">02</span>
+            <div class="case-row__head">
+              <h3 class="case-row__name">Restaurante Stagi</h3>
+              <span class="case-row__sector">F&amp;B · Curitiba</span>
+            </div>
+            <dl class="case-row__metrics">
+              <div><dt>Reservas / sem.</dt><dd>+5<span>x</span></dd></div>
+              <div><dt>Tempo no site</dt><dd>+2m18<span>s</span></dd></div>
+              <div><dt>Conversão</dt><dd>11.4<span>%</span></dd></div>
+            </dl>
+            <p class="case-row__quote">"O sistema de reservas tirou a recepcionista do telefone. Hoje ela cuida do salão de novo, e a fila é online."</p>
+            <span class="case-row__author">— Marcelo Stagi, proprietário</span>
+          </article>
+
+          <article class="case-row fade-up">
+            <span class="case-row__index">03</span>
+            <div class="case-row__head">
+              <h3 class="case-row__name">Imobiliária Norte</h3>
+              <span class="case-row__sector">Real estate · PR</span>
+            </div>
+            <dl class="case-row__metrics">
+              <div><dt>Chamadas WhatsApp</dt><dd>+142<span>%</span></dd></div>
+              <div><dt>SEO orgânico</dt><dd>1ª pág.</dd></div>
+              <div><dt>ROI tráfego</dt><dd>3.2<span>x</span></dd></div>
+            </dl>
+            <p class="case-row__quote">"O painel mostra cada lead vindo de cada anúncio. A gente parou de chutar o quanto investir."</p>
+            <span class="case-row__author">— Rafael Brandão, diretor comercial</span>
+          </article>
+        </div>
+
+        <a class="case-grid__cta is-magnetic" data-magnetic href="sites.html">Ver os 14 projetos por segmento →</a>
+      </div>
+    </section>
+
+    <!-- ─── PROCESSO ─── -->
+    <section class="section" id="processo" aria-labelledby="titulo-processo">
+      <div class="layout-container">
+        <header class="section__header fade-up">
+          <span class="label-mono">// 04 — PROCESSO</span>
+          <h2 class="section__title" id="titulo-processo" data-reveal-text>Do diagnóstico ao painel rodando.</h2>
+          <p class="section__description">Seis etapas claras, cronograma público e nenhum "depois a gente vê".</p>
+        </header>
+
+        <ol class="timeline" aria-label="Etapas do processo de trabalho">
+          <li class="timeline__step fade-up">
+            <span class="timeline__num" aria-hidden="true">1</span>
+            <div class="timeline__body">
+              <h3 class="timeline__title">Diagnóstico (gratuito)</h3>
+              <p class="timeline__text">Reunião de 20 min pra entender objetivo, gargalos e investimento possível.</p>
+            </div>
+            <span class="timeline__deadline">24h</span>
+          </li>
+          <li class="timeline__step fade-up">
+            <span class="timeline__num" aria-hidden="true">2</span>
+            <div class="timeline__body">
+              <h3 class="timeline__title">Proposta &amp; Contrato</h3>
+              <p class="timeline__text">Escopo fechado, valores, cronograma assinados. Sem letra miúda.</p>
+            </div>
+            <span class="timeline__deadline">3–5 dias</span>
+          </li>
+          <li class="timeline__step fade-up">
+            <span class="timeline__num" aria-hidden="true">3</span>
+            <div class="timeline__body">
+              <h3 class="timeline__title">Design &amp; Aprovação</h3>
+              <p class="timeline__text">Wireframe, identidade visual e protótipo navegável aprovados antes de uma linha de código.</p>
+            </div>
+            <span class="timeline__deadline">2 sem.</span>
+          </li>
+          <li class="timeline__step fade-up">
+            <span class="timeline__num" aria-hidden="true">4</span>
+            <div class="timeline__body">
+              <h3 class="timeline__title">Construção</h3>
+              <p class="timeline__text">Front, back, integrações. Você vê o progresso em ambiente real, todo Friday.</p>
+            </div>
+            <span class="timeline__deadline">2–10 sem.</span>
+          </li>
+          <li class="timeline__step fade-up">
+            <span class="timeline__num" aria-hidden="true">5</span>
+            <div class="timeline__body">
+              <h3 class="timeline__title">Testes</h3>
+              <p class="timeline__text">QA, performance, responsividade, acessibilidade. Lighthouse não passa de 90 → não vai pro ar.</p>
+            </div>
+            <span class="timeline__deadline">1 sem.</span>
+          </li>
+          <li class="timeline__step fade-up">
+            <span class="timeline__num" aria-hidden="true">6</span>
+            <div class="timeline__body">
+              <h3 class="timeline__title">Entrega &amp; Treinamento</h3>
+              <p class="timeline__text">Publicação, handover, treinamento da sua equipe e 30 dias de garantia ativa.</p>
+            </div>
+            <span class="timeline__deadline">1 sem.</span>
+          </li>
+        </ol>
+
+        <article class="warranty-card fade-up">
+          <span class="label-mono label-mono--accent">// RISCO ZERO</span>
+          <h3 class="warranty-card__title">Garantia de 30 dias após a entrega</h3>
+          <p class="warranty-card__text">Qualquer falha de implementação dentro do escopo, ajustamos sem custo. Seu único risco é continuar como está.</p>
         </article>
       </div>
     </section>
 
-    <section class="section" id="time" aria-labelledby="titulo-time">
+    <!-- ─── TIME ─── -->
+    <section class="section section--muted" id="time" aria-labelledby="titulo-time">
       <div class="layout-container">
         <header class="section__header fade-up">
-          <span class="section__label">// 03 — TIME</span>
-          <h2 class="section__title" id="titulo-time" data-reveal-text>Quem está por trás</h2>
-          <p class="section__description">Quatro sócios, áreas complementares, mesma obsessão: entregar resultado.</p>
+          <span class="label-mono">// 05 — TIME</span>
+          <h2 class="section__title" id="titulo-time" data-reveal-text>Quatro sócios. Mesma operação.</h2>
+          <p class="section__description">Sem terceirização, sem estagiário fazendo o seu projeto. Quem orça é quem entrega.</p>
         </header>
 
         <div class="team-grid">
@@ -303,117 +422,51 @@
             <span class="team-card__avatar" aria-hidden="true">F</span>
             <h3 class="team-card__name">Francisco</h3>
             <p class="team-card__role">Comercial &amp; CS</p>
-            <p class="team-card__stack">Funil · Onboarding · Sucesso</p>
+            <p class="team-card__stack">Funil · Onboarding · Sucesso do cliente</p>
           </article>
           <article class="team-card fade-up">
             <span class="team-card__avatar" aria-hidden="true">A</span>
             <h3 class="team-card__name">Arthur</h3>
-            <p class="team-card__role">Design / UX</p>
-            <p class="team-card__stack">Figma · UI · Brand</p>
+            <p class="team-card__role">Design &amp; UX</p>
+            <p class="team-card__stack">Figma · UI · Brand · Motion</p>
           </article>
           <article class="team-card fade-up">
             <span class="team-card__avatar" aria-hidden="true">R</span>
             <h3 class="team-card__name">Rodrigo</h3>
             <p class="team-card__role">Tech Lead</p>
-            <p class="team-card__stack">TypeScript · Next.js · Node</p>
+            <p class="team-card__stack">TypeScript · Next.js · Node · Postgres</p>
           </article>
           <article class="team-card fade-up">
             <span class="team-card__avatar" aria-hidden="true">G</span>
             <h3 class="team-card__name">Gustavo</h3>
-            <p class="team-card__role">Growth / Tráfego</p>
-            <p class="team-card__stack">Meta Ads · Google Ads · GA4</p>
+            <p class="team-card__role">Growth &amp; Tráfego</p>
+            <p class="team-card__stack">Meta Ads · Google Ads · GA4 · GTM</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section section--muted" id="processo" aria-labelledby="titulo-processo">
-      <div class="layout-container">
-        <header class="section__header fade-up">
-          <span class="section__label">// 04 — PROCESSO</span>
-          <h2 class="section__title" id="titulo-processo" data-reveal-text>Como trabalhamos</h2>
-          <p class="section__description">Seis etapas claras do briefing até o treinamento da sua equipe.</p>
-        </header>
-
-        <ol class="timeline" aria-label="Etapas do processo de trabalho">
-          <li class="timeline__step fade-up">
-            <span class="timeline__num" aria-hidden="true">1</span>
-            <div class="timeline__body">
-              <h3 class="timeline__title">Briefing</h3>
-              <p class="timeline__text">Reunião pra entender objetivo, público e referências.</p>
-            </div>
-            <span class="timeline__deadline">1 semana</span>
-          </li>
-          <li class="timeline__step fade-up">
-            <span class="timeline__num" aria-hidden="true">2</span>
-            <div class="timeline__body">
-              <h3 class="timeline__title">Proposta &amp; Contrato</h3>
-              <p class="timeline__text">Escopo fechado, valores e cronograma assinados.</p>
-            </div>
-            <span class="timeline__deadline">3 a 5 dias</span>
-          </li>
-          <li class="timeline__step fade-up">
-            <span class="timeline__num" aria-hidden="true">3</span>
-            <div class="timeline__body">
-              <h3 class="timeline__title">Design &amp; Aprovação</h3>
-              <p class="timeline__text">Wireframe, identidade visual e protótipo navegável.</p>
-            </div>
-            <span class="timeline__deadline">2 semanas</span>
-          </li>
-          <li class="timeline__step fade-up">
-            <span class="timeline__num" aria-hidden="true">4</span>
-            <div class="timeline__body">
-              <h3 class="timeline__title">Desenvolvimento</h3>
-              <p class="timeline__text">Implementação front-end, back-end e integrações.</p>
-            </div>
-            <span class="timeline__deadline">2 a 10 semanas</span>
-          </li>
-          <li class="timeline__step fade-up">
-            <span class="timeline__num" aria-hidden="true">5</span>
-            <div class="timeline__body">
-              <h3 class="timeline__title">Testes</h3>
-              <p class="timeline__text">QA, performance, responsividade e acessibilidade.</p>
-            </div>
-            <span class="timeline__deadline">1 semana</span>
-          </li>
-          <li class="timeline__step fade-up">
-            <span class="timeline__num" aria-hidden="true">6</span>
-            <div class="timeline__body">
-              <h3 class="timeline__title">Entrega &amp; Treinamento</h3>
-              <p class="timeline__text">Publicação, handover e treinamento da sua equipe.</p>
-            </div>
-            <span class="timeline__deadline">1 semana</span>
-          </li>
-        </ol>
-
-        <article class="warranty-card fade-up">
-          <h3 class="warranty-card__title">Garantia de 30 dias</h3>
-          <p class="warranty-card__text">Após a entrega, ajustamos sem custo qualquer falha de implementação dentro do escopo.</p>
-        </article>
-      </div>
-    </section>
-
+    <!-- ─── CTA FINAL ─── -->
     <section class="section section--cta" aria-labelledby="titulo-cta">
       <div class="layout-container">
         <div class="cta-block fade-up">
-          <span class="section__label section__label--center">// 05 — VAMOS CONVERSAR</span>
-          <h2 class="cta-block__title" id="titulo-cta" data-reveal-text>Pronto para crescer no <span class="hero__title-accent">digital</span>?</h2>
-          <p class="cta-block__description">Conta pra gente onde sua empresa está hoje — a gente desenha o caminho.</p>
-          <a class="hero__cta is-magnetic" data-magnetic data-cursor-hover="WhatsApp" href="https://wa.me/5541995892937" target="_blank" rel="noopener">
-            <span class="hero__cta-label">
-              <span class="hero__cta-text">Falar no WhatsApp</span>
-              <span class="hero__cta-text hero__cta-text--clone" aria-hidden="true">Falar no WhatsApp</span>
-            </span>
-            <span class="hero__cta-icon" aria-hidden="true">→</span>
+          <span class="label-mono label-mono--accent">// 06 — PRÓXIMO PASSO</span>
+          <h2 class="cta-block__title" id="titulo-cta" data-reveal-text>20 minutos. Diagnóstico no painel. Sem custo.</h2>
+          <p class="cta-block__description">Você manda o link do seu site (ou nada). A gente devolve um diagnóstico técnico com prioridades claras e faixa de investimento. Decide depois — ou nunca.</p>
+          <a class="btn btn--primary btn--xl is-magnetic" data-magnetic href="https://wa.me/5541995892937?text=Quero%20meu%20diagn%C3%B3stico%20gratuito" target="_blank" rel="noopener">
+            <span>Quero meu diagnóstico</span>
+            <span class="btn__arrow" aria-hidden="true">→</span>
           </a>
           <p class="cta-block__meta">
             <span class="status-dot" aria-hidden="true"></span>
-            Resposta em até 24h · Briefing gratuito
+            Resposta em até 24h · Diagnóstico em PDF
           </p>
           <p class="cta-block__contacts">
             <a href="mailto:contato@fargco.com.br">contato@fargco.com.br</a>
             <span aria-hidden="true">·</span>
             <a href="https://www.instagram.com/fargco" target="_blank" rel="noopener">@fargco</a>
+            <span aria-hidden="true">·</span>
+            <a href="tel:+554195892937">+55 (41) 99589-2937</a>
           </p>
         </div>
       </div>
@@ -422,7 +475,7 @@
 
   <footer class="site-footer" aria-label="Rodapé">
     <div class="layout-container site-footer__content">
-      <p class="site-footer__copyright">&copy; <span id="ano-atual">2026</span> FARG Co. Todos os direitos reservados.</p>
+      <p class="site-footer__copyright">&copy; <span id="ano-atual">2026</span> FARG Co. — Engenharia de presença digital.</p>
       <address class="site-footer__contact">
         <a href="mailto:contato@fargco.com.br">contato@fargco.com.br</a>
       </address>

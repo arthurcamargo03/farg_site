@@ -1,7 +1,12 @@
 import { prefersReducedMotion, finePointer } from '../lib/motion.js';
 
-export const initShowcases = () => {
-  document.querySelectorAll('[data-site-showcase]').forEach((showcase) => {
+export const initShowcases = (root = document) => {
+  const showcases = root.querySelectorAll('[data-site-showcase]');
+  if (!showcases.length) return null;
+
+  const cleanups = [];
+
+  showcases.forEach((showcase) => {
     const topics = Array.from(showcase.querySelectorAll('[data-site-topic]'));
     const previews = Array.from(showcase.querySelectorAll('[data-site-preview]'));
     const topicList = showcase.querySelector('[data-topic-list]');
@@ -50,12 +55,13 @@ export const initShowcases = () => {
 
     setActiveSite(activeIndex, { scroll: false, instant: true });
 
+    const topicHandlers = [];
     topics.forEach((topic, index) => {
       topic.tabIndex = index === activeIndex ? 0 : -1;
-      topic.addEventListener('pointerenter', () => setActiveSite(index));
-      topic.addEventListener('focus', () => setActiveSite(index, { scroll: false }));
-      topic.addEventListener('click', () => setActiveSite(index, { resetProjects: true }));
-      topic.addEventListener('keydown', (event) => {
+      const onEnter = () => setActiveSite(index);
+      const onFocus = () => setActiveSite(index, { scroll: false });
+      const onClick = () => setActiveSite(index, { resetProjects: true });
+      const onKey = (event) => {
         const lastIndex = topics.length - 1;
         let nextIndex = activeIndex;
         if (event.key === 'ArrowDown' || event.key === 'ArrowRight') nextIndex = Math.min(activeIndex + 1, lastIndex);
@@ -66,35 +72,66 @@ export const initShowcases = () => {
         event.preventDefault();
         setActiveSite(nextIndex, { resetProjects: true });
         topics[nextIndex].focus({ preventScroll: true });
-      });
+      };
+      topic.addEventListener('pointerenter', onEnter);
+      topic.addEventListener('focus', onFocus);
+      topic.addEventListener('click', onClick);
+      topic.addEventListener('keydown', onKey);
+      topicHandlers.push([topic, onEnter, onFocus, onClick, onKey]);
     });
 
-    if (topicPrev) topicPrev.addEventListener('click', () => moveActiveTopic(-1));
-    if (topicNext) topicNext.addEventListener('click', () => moveActiveTopic(1));
+    const onPrev = () => moveActiveTopic(-1);
+    const onNext = () => moveActiveTopic(1);
+    if (topicPrev) topicPrev.addEventListener('click', onPrev);
+    if (topicNext) topicNext.addEventListener('click', onNext);
 
+    let onListMove = null;
     if (topicList && finePointer) {
-      topicList.addEventListener('pointermove', (event) => {
+      onListMove = (event) => {
         const hoveredTopic = event.target.closest('[data-site-topic]');
         if (!hoveredTopic) return;
         const hoveredIndex = Number(hoveredTopic.getAttribute('data-site-index'));
         if (hoveredIndex !== activeIndex) setActiveSite(hoveredIndex, { resetProjects: true });
-      });
+      };
+      topicList.addEventListener('pointermove', onListMove);
     }
 
+    let onShowcaseMove = null;
     if (showcaseOrb) {
-      showcase.addEventListener('pointermove', (event) => {
+      onShowcaseMove = (event) => {
         const rect = showcaseOrb.getBoundingClientRect();
         const lightX = Math.max(12, Math.min(88, ((event.clientX - rect.left) / rect.width) * 100));
         const lightY = Math.max(12, Math.min(88, ((event.clientY - rect.top) / rect.height) * 100));
         showcaseOrb.style.setProperty('--orb-light-x', `${lightX}%`);
         showcaseOrb.style.setProperty('--orb-light-y', `${lightY}%`);
-      }, { passive: true });
+      };
+      showcase.addEventListener('pointermove', onShowcaseMove, { passive: true });
     }
+
+    cleanups.push(() => {
+      topicHandlers.forEach(([topic, onEnter, onFocus, onClick, onKey]) => {
+        topic.removeEventListener('pointerenter', onEnter);
+        topic.removeEventListener('focus', onFocus);
+        topic.removeEventListener('click', onClick);
+        topic.removeEventListener('keydown', onKey);
+      });
+      if (topicPrev) topicPrev.removeEventListener('click', onPrev);
+      if (topicNext) topicNext.removeEventListener('click', onNext);
+      if (topicList && onListMove) topicList.removeEventListener('pointermove', onListMove);
+      if (showcaseOrb && onShowcaseMove) showcase.removeEventListener('pointermove', onShowcaseMove);
+    });
   });
+
+  return cleanups.length ? () => cleanups.forEach((fn) => fn()) : null;
 };
 
-export const initProjectCarousels = () => {
-  document.querySelectorAll('[data-project-carousel]').forEach((carousel) => {
+export const initProjectCarousels = (root = document) => {
+  const carousels = root.querySelectorAll('[data-project-carousel]');
+  if (!carousels.length) return null;
+
+  const cleanups = [];
+
+  carousels.forEach((carousel) => {
     const viewport = carousel.querySelector('[data-project-viewport]');
     const track = carousel.querySelector('[data-project-track]');
     const prev = carousel.querySelector('[data-project-prev]');
@@ -112,7 +149,16 @@ export const initProjectCarousels = () => {
       });
     };
 
-    if (prev) prev.addEventListener('click', () => scrollProjects(-1));
-    if (next) next.addEventListener('click', () => scrollProjects(1));
+    const onPrev = () => scrollProjects(-1);
+    const onNext = () => scrollProjects(1);
+    if (prev) prev.addEventListener('click', onPrev);
+    if (next) next.addEventListener('click', onNext);
+
+    cleanups.push(() => {
+      if (prev) prev.removeEventListener('click', onPrev);
+      if (next) next.removeEventListener('click', onNext);
+    });
   });
+
+  return cleanups.length ? () => cleanups.forEach((fn) => fn()) : null;
 };
